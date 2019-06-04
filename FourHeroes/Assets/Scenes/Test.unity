@@ -244,11 +244,11 @@ MonoBehaviour:
   m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
   m_weaponIlvl: 10
   m_weapon: {fileID: 11400000, guid: 9e00e1d61c56e5d4eae918ed1f22513a, type: 2}
-  m_armourIlvl: 0
-  m_armour: {fileID: 0}
-  m_amuletIlvl: 0
-  m_amulet: {fileID: 0}
-  m_relicIlvl: 0
+  m_armourIlvl: 10
+  m_armour: {fileID: 11400000, guid: df0d8b0898245ed48b48927d69ee3e00, type: 2}
+  m_amuletIlvl: 10
+  m_amulet: {fileID: 11400000, guid: 145c5238615e7634aaebe5bcdc9d9349, type: 2}
+  m_relicIlvl: 10
   m_relic: {fileID: 0}
   m_currentStats:
     health: 0
