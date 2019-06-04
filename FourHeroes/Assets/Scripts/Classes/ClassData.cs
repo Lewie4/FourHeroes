@@ -17,16 +17,16 @@ public enum CharacterClass
 public class ClassData : ScriptableObject
 {
     [Header("Primary Stats")]
-    [SerializeField] CharacterClass m_class;
-    [SerializeField] AnimationCurve m_health;
-    [SerializeField] AnimationCurve m_strength;
-    [SerializeField] AnimationCurve m_dexterity;
-    [SerializeField] AnimationCurve m_intelligence;
-    [SerializeField] ClassStatMultiplier m_multiplier;
+    [SerializeField] CharacterClass characterClass;
+    [SerializeField] AnimationCurve health;
+    [SerializeField] AnimationCurve strength;
+    [SerializeField] AnimationCurve dexterity;
+    [SerializeField] AnimationCurve intelligence;
+    [SerializeField] ClassStatMultiplier multiplier;
 
     [Header("Secondary Stats")]
-    [SerializeField] AnimationCurve m_crit;
-    [SerializeField] AnimationCurve m_dodge;
-    [SerializeField] AnimationCurve m_block;
-    [SerializeField] AnimationCurve m_attackSpeed;
+    [SerializeField] AnimationCurve crit;
+    [SerializeField] AnimationCurve dodge;
+    [SerializeField] AnimationCurve block;
+    [SerializeField] AnimationCurve attackSpeed;
 }

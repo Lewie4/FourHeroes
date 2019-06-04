@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a33617ff992c0418f75973c19cc923, type: 3}
   m_Name: CSword1
   m_EditorClassIdentifier: 
-  m_itemType: 0
-  m_quality: 0
-  m_stat1:
-    m_stat: 0
-    m_multiplier: 0
-  m_stat2:
-    m_stat: 0
-    m_multiplier: 0
-  m_stat3:
-    m_stat: 0
-    m_multiplier: 0
-  m_stat4:
-    m_stat: 0
-    m_multiplier: 0
-  m_specialAbility: 0
-  m_weaponType: 0
+  itemType: 0
+  quality: 0
+  stat1:
+    stat: 2
+    multiplier: 1
+  stat2:
+    stat: 0
+    multiplier: 0
+  stat3:
+    stat: 0
+    multiplier: 0
+  stat4:
+    stat: 0
+    multiplier: 0
+  specialAbility: 0
+  weaponType: 0

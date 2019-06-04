@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ClassStatMult", menuName = "Classes/Multiplier")]
 public class ClassStatMultiplier : ScriptableObject
 {
-    [SerializeField] float m_healthMult;
-    [SerializeField] float m_strengthMult;
-    [SerializeField] float m_dexterityMult;
-    [SerializeField] float m_intelligenceMult;
+    [SerializeField] float healthMult;
+    [SerializeField] float strengthMult;
+    [SerializeField] float dexterityMult;
+    [SerializeField] float intelligenceMult;
 }

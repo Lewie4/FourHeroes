@@ -34,21 +34,21 @@ public enum Stat
 [System.Serializable]
 public class ItemStat
 {
-    public Stat m_stat;
-    public float m_multiplier;
+    public Stat stat;
+    public float multiplier;
 }
 
 
 public class BaseItem : ScriptableObject
 {
-    [SerializeField] protected ItemType m_itemType;
-    [SerializeField] protected ItemQuality m_quality;
+    public ItemType itemType;
+    public ItemQuality quality;
 
     [Header("Item Stats")]
-    [SerializeField] protected ItemStat m_stat1;
-    [SerializeField] protected ItemStat m_stat2;
-    [SerializeField] protected ItemStat m_stat3;
-    [SerializeField] protected ItemStat m_stat4;
-    [SerializeField] protected int m_specialAbility;    //TODO: Replace with special ability (Mainly for Relics)
+    public ItemStat stat1;
+    public ItemStat stat2;
+    public ItemStat stat3;
+    public ItemStat stat4;
+    public int specialAbility;   //TODO: Replace with special ability (Mainly for Relics)
 
 }

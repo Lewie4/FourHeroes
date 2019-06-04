@@ -6,5 +6,5 @@ using UnityEngine;
 public class Relic : BaseItem
 {
     [Header("Relic Specific")]
-    [SerializeField] CharacterClass m_relicClass;
+    [SerializeField] CharacterClass relicClass;
 }

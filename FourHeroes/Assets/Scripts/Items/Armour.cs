@@ -13,5 +13,5 @@ public enum ArmourType
 public class Armour : BaseItem
 {
     [Header("Armour Specific")]
-    [SerializeField] ArmourType m_weaponType;
+    [SerializeField] ArmourType armourType;
 }

@@ -14,5 +14,5 @@ public enum WeaponType
 public class Weapon : BaseItem
 {
     [Header("Weapon Specific")]
-    [SerializeField] WeaponType m_weaponType;
+    [SerializeField] WeaponType weaponType;
 }
