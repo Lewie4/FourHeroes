@@ -70,6 +70,7 @@ public class Hero : MonoBehaviour
 
     private void AddItemStats(BaseItem item, int ilvl)
     {
+        //Check I have the right level for the item
         if (item != null)
         {
             AddStat(item.stat1, ilvl);
@@ -145,7 +146,7 @@ public class Hero : MonoBehaviour
 
             float totalDamage = dexDamage + intDamage + strDamage; //TODO: Crit damage
 
-            Debug.Log("I did " + totalDamage + " damage!");
+            Debug.Log(gameObject.name + " did " + totalDamage + " damage!");
 
             return totalDamage;
         }

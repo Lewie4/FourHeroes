@@ -12,7 +12,10 @@ public class HeroGroup : Group
     {
         for (int i = 0; i < GROUPSIZE; i++)
         {
-            m_group[i].TryAttack();
+            if (m_group[i] != null)
+            {
+                m_group[i].TryAttack();
+            }
         }
     }
 }
