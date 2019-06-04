@@ -28,7 +28,10 @@ public class Hero : MonoBehaviour
     [SerializeField] int m_relicIlvl;
     [SerializeField] Relic m_relic;
 
-    [SerializeField] private HeroStats m_currentStats;
+    //Everything below is only shown for debugging
+    [SerializeField] protected HeroStats m_currentStats;
+
+    [SerializeField] protected float m_timeSinceLastAttack;
 
     private void Start()
     {
@@ -128,8 +131,34 @@ public class Hero : MonoBehaviour
         }
     }
 
-    private void Attack()
+    public float TryAttack()
     {
-        Debug.Log("Attack");
+        m_timeSinceLastAttack += Time.deltaTime;
+        if (CheckCanAttack())
+        {
+            m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
+            float dexDamage = m_currentStats.dexterity * m_characterClass.multiplier.dexterityMult;
+            float intDamage = m_currentStats.intelligence * m_characterClass.multiplier.intelligenceMult;
+            float strDamage = m_currentStats.strength * m_characterClass.multiplier.strengthMult;
+
+            //TODO:Crit chance
+
+            float totalDamage = dexDamage + intDamage + strDamage; //TODO: Crit damage
+
+            Debug.Log("I did " + totalDamage + " damage!");
+
+            return totalDamage;
+        }
+
+        return 0;
+    }
+
+    protected bool CheckCanAttack()
+    {
+        if (m_timeSinceLastAttack > m_currentStats.attackSpeed)
+        {
+            return true;
+        }
+        return false;
     }
 }

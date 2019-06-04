@@ -4,5 +4,15 @@ using UnityEngine;
 
 public class HeroGroup : Group
 {
-    [SerializeField] private Hero[] m_group = new Hero[4];
+    public const int GROUPSIZE = 4;
+
+    [SerializeField] private Hero[] m_group = new Hero[GROUPSIZE];
+
+    private void Update()
+    {
+        for (int i = 0; i < GROUPSIZE; i++)
+        {
+            m_group[i].TryAttack();
+        }
+    }
 }
