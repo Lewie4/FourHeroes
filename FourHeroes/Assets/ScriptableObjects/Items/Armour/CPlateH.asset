@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e46ae8ede84d447aa6ffde3682aba6, type: 3}
+  m_Name: CPlateH
+  m_EditorClassIdentifier: 
+  m_itemType: 1
+  m_quality: 0
+  m_stat1:
+    m_stat: 1
+    m_multiplier: 0
+  m_stat2:
+    m_stat: 0
+    m_multiplier: 0
+  m_stat3:
+    m_stat: 0
+    m_multiplier: 0
+  m_stat4:
+    m_stat: 0
+    m_multiplier: 0
+  m_specialAbility: 0
+  m_weaponType: 2
