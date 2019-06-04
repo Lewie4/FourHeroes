@@ -35,7 +35,7 @@ public enum Stat
 public class ItemStat
 {
     public Stat stat;
-    public float multiplier;
+    public float value;
 }
 
 

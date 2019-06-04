@@ -82,47 +82,46 @@ public class Hero : MonoBehaviour
 
     private void AddStat(ItemStat itemStat, int ilvl)
     {
-        float statPoints = (itemStat.multiplier * ilvl);
         switch (itemStat.stat)
         {
             case Stat.AttackSpeed:
                 {
-                    m_currentStats.attackSpeed += statPoints;
+                    m_currentStats.attackSpeed -= itemStat.value;
                     break;
                 }
             case Stat.Block:
                 {
-                    m_currentStats.block += statPoints;
+                    m_currentStats.block += itemStat.value;
                     break;
                 }
             case Stat.Crit:
                 {
-                    m_currentStats.crit += statPoints;
+                    m_currentStats.crit += itemStat.value;
                     break;
                 }
             case Stat.Dexterity:
                 {
-                    m_currentStats.dexterity += statPoints;
+                    m_currentStats.dexterity += itemStat.value * ilvl;
                     break;
                 }
             case Stat.Dodge:
                 {
-                    m_currentStats.dodge += statPoints;
+                    m_currentStats.dodge += itemStat.value;
                     break;
                 }
             case Stat.Health:
                 {
-                    m_currentStats.health += statPoints;
+                    m_currentStats.health += itemStat.value * ilvl;
                     break;
                 }
             case Stat.Intelligence:
                 {
-                    m_currentStats.intelligence += statPoints;
+                    m_currentStats.intelligence += itemStat.value * ilvl;
                     break;
                 }
             case Stat.Strength:
                 {
-                    m_currentStats.strength += statPoints;
+                    m_currentStats.strength += itemStat.value * ilvl;
                     break;
                 }
             default:
