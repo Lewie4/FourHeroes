@@ -237,18 +237,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 461909938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9776fc34879d8ff4f8de81281eeccfaa, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_characterLevel: 10
-  m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
-  m_weaponIlvl: 10
-  m_weapon: {fileID: 11400000, guid: 9e00e1d61c56e5d4eae918ed1f22513a, type: 2}
-  m_armourIlvl: 10
-  m_armour: {fileID: 11400000, guid: df0d8b0898245ed48b48927d69ee3e00, type: 2}
-  m_amuletIlvl: 10
-  m_amulet: {fileID: 11400000, guid: 145c5238615e7634aaebe5bcdc9d9349, type: 2}
-  m_relicIlvl: 10
+  m_characterLevel: 0
+  m_characterClass: {fileID: 0}
+  m_weaponIlvl: 0
+  m_weapon: {fileID: 0}
+  m_armourIlvl: 0
+  m_armour: {fileID: 0}
+  m_amuletIlvl: 0
+  m_amulet: {fileID: 0}
+  m_relicIlvl: 0
   m_relic: {fileID: 0}
   m_currentStats:
     health: 0
@@ -259,6 +259,7 @@ MonoBehaviour:
     dodge: 0
     block: 0
     attackSpeed: 0
+  m_timeSinceLastAttack: 0
 --- !u!4 &461909940
 Transform:
   m_ObjectHideFlags: 0
@@ -386,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_group:
-  - {fileID: 461909939}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
