@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e46ae8ede84d447aa6ffde3682aba6, type: 3}
   m_Name: CPlateH
   m_EditorClassIdentifier: 
-  m_itemType: 1
-  m_quality: 0
-  m_stat1:
-    m_stat: 1
-    m_multiplier: 0
-  m_stat2:
-    m_stat: 0
-    m_multiplier: 0
-  m_stat3:
-    m_stat: 0
-    m_multiplier: 0
-  m_stat4:
-    m_stat: 0
-    m_multiplier: 0
-  m_specialAbility: 0
-  m_weaponType: 2
+  itemType: 1
+  quality: 0
+  stat1:
+    stat: 1
+    multiplier: 1
+  stat2:
+    stat: 0
+    multiplier: 0
+  stat3:
+    stat: 0
+    multiplier: 0
+  stat4:
+    stat: 0
+    multiplier: 0
+  specialAbility: 0
+  armourType: 2

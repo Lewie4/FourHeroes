@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d465cf23374ae6948b526ba0388b1fb4, type: 3}
-  m_Name: CAmulet1
+  m_Name: CAmuletH
   m_EditorClassIdentifier: 
-  m_itemType: 0
-  m_quality: 0
-  m_stat1:
-    m_stat: 0
-    m_multiplier: 0
-  m_stat2:
-    m_stat: 0
-    m_multiplier: 0
-  m_stat3:
-    m_stat: 0
-    m_multiplier: 0
-  m_stat4:
-    m_stat: 0
-    m_multiplier: 0
-  m_specialAbility: 0
+  itemType: 2
+  quality: 0
+  stat1:
+    stat: 1
+    multiplier: 1
+  stat2:
+    stat: 0
+    multiplier: 0
+  stat3:
+    stat: 0
+    multiplier: 0
+  stat4:
+    stat: 0
+    multiplier: 0
+  specialAbility: 0

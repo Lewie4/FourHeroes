@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38826c936c44a9e4db06d9363b1b1129, type: 3}
-  m_Name: CRelic1
+  m_Script: {fileID: 11500000, guid: 26e46ae8ede84d447aa6ffde3682aba6, type: 3}
+  m_Name: CClothH
   m_EditorClassIdentifier: 
-  itemType: 3
+  itemType: 1
   quality: 0
   stat1:
-    stat: 0
-    multiplier: 0
+    stat: 1
+    multiplier: 1
   stat2:
     stat: 0
     multiplier: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
     stat: 0
     multiplier: 0
   specialAbility: 0
-  relicClass: 0
+  armourType: 0

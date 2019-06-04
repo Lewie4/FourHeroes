@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4669ea1d7181e4d82169fed1473c60, type: 3}
   m_Name: PriestStatMult
   m_EditorClassIdentifier: 
-  m_healthMult: 1
-  m_strengthMult: 0
-  m_dexterityMult: 0.25
-  m_intelligenceMult: 1
+  healthMult: 1
+  strengthMult: 0
+  dexterityMult: 0.25
+  intelligenceMult: 1

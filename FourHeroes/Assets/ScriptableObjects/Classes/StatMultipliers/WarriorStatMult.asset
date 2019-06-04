@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4669ea1d7181e4d82169fed1473c60, type: 3}
   m_Name: WarriorStatMult
   m_EditorClassIdentifier: 
-  m_healthMult: 1
-  m_strengthMult: 1
-  m_dexterityMult: 0.25
-  m_intelligenceMult: 0
+  healthMult: 1
+  strengthMult: 1
+  dexterityMult: 0.25
+  intelligenceMult: 0
