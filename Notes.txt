@@ -1,0 +1,105 @@
+Weapon
+-Sword
+--Warrior
+--Gladiator
+-Daggers
+--Rogue
+--
+-Staff
+--Mage
+--Priest
+-Bow
+--Archer
+--Beast Master
+
+Armour
+-Cloth
+--Mage
+--Priest
+-Leather
+--Archer
+--Rogue
+--Beast Master
+-Plate
+--Warrior
+--Gladiator
+
+Neck
+
+Relic
+
+
+Sword 
+Common
+-(1 - 1.1) Str
+
+Rare
+-(1.25 - 1.35) Str
+-(0.5 - 0.6) Crit
+
+Epic 
+-(1.5 - 1.6) Str
+-(0.75 - 0.85) Crit
+-(0.2 - 0.3) Int
+
+Legendary
+-(1.75 - 1.85) Str
+-(1 - 1.1) Crit
+-(0.45 - 0.55) Int
+-(0.2 - 0.3) AS
+
+
+Level 80
+ilvl 650 - 700
+
+Comm 650 - 770 Str
+Rare 812.5 - 945 Str, 325 - 420 Crit
+Epic 975 - 1120 Str, 487.5 - 595 Crit, 130 - 210 Int
+Lege 1137.5- 1295 Str, 650 - 770 Crit, 292.5 - 385 Int, 130 - 210 AS
+
+Level 85
+700 - 750
+
+Comm 700 - 825 Str
+Rare 875 - 1012.5 Str, 350 - 450 Crit
+Epic 
+
+
+Sword 
+Common
+-1 Str
+
+Rare
+-1.25 Str
+-0.5 Crit
+
+Epic 
+-1.5 Str
+-0.6 Crit
+-0.3 Int
+
+Legendary
+-1.75 Str
+-0.7 Crit
+-0.4 Int
+-0.2 AS
+
+
+Level 80
+ilvl 650 - 700
+
+Comm 650 - 700 Str
+Rare 812.5 - 875 Str, 325 - 350 Crit
+Epic 975 - 1050 Str, 390 - 420 Crit, 195 - 210 Int
+Lege 1137.5 - 1225 Str, 455 - 490 Crit, 260 - 280 Int, 130 - 140 AS
+
+Level 85
+ilvl 700 - 750
+
+Comm 700 - 750 Str
+Rare 875 - 937.5 Str, 305 - 375 Crit
+Epic 1050 - 1125 Str, 420 - 450 Crit, 210 - 225 Int
+Lege 1225 - 1312.5 Str, 490 - 525 Crit, 280 - 300 Int, 140 - 150 AS
+
+
+
