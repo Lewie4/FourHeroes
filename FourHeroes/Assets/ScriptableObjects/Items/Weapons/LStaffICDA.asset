@@ -16,15 +16,15 @@ MonoBehaviour:
   quality: 1
   stat1:
     stat: 4
-    multiplier: 1.75
+    value: 1.75
   stat2:
     stat: 5
-    multiplier: 0.7
+    value: 7
   stat3:
     stat: 3
-    multiplier: 0.4
+    value: 0.4
   stat4:
     stat: 8
-    multiplier: 0.2
+    value: 0.2
   specialAbility: 0
   weaponType: 2
