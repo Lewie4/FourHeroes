@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61a33617ff992c0418f75973c19cc923, type: 3}
-  m_Name: CSword
+  m_Name: CSword1
   m_EditorClassIdentifier: 
   m_itemType: 0
   m_quality: 0

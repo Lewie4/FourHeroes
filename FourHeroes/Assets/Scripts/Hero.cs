@@ -9,4 +9,9 @@ public class Hero : MonoBehaviour
     [SerializeField] Armour m_armour;
     [SerializeField] Amulet m_amulet;
     [SerializeField] Relic m_relic;
+
+    private void Attack()
+    {
+        Debug.Log("Attack");
+    }
 }

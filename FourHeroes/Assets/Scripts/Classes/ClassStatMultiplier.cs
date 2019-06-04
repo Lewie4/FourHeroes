@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ClassMultiplier", menuName = "Classes/Multiplier")]
+[CreateAssetMenu(fileName = "ClassStatMult", menuName = "Classes/Multiplier")]
 public class ClassStatMultiplier : ScriptableObject
 {
     [SerializeField] float m_healthMult;
