@@ -17,7 +17,8 @@ public class Hero : MonoBehaviour
         public float attackSpeed;
     }
 
-    [SerializeField] ClassData m_class;
+    [SerializeField] int m_characterLevel;
+    [SerializeField] ClassData m_characterClass;
     [SerializeField] int m_weaponIlvl;
     [SerializeField] Weapon m_weapon;
     [SerializeField] int m_armourIlvl;
@@ -42,13 +43,29 @@ public class Hero : MonoBehaviour
     public void SetupStats()
     {
         ClearStats();
+        AddClassStats();
         AddItemStats(m_amulet, m_amuletIlvl);
         AddItemStats(m_armour, m_armourIlvl);
         AddItemStats(m_relic, m_relicIlvl);
         AddItemStats(m_weapon, m_weaponIlvl);
     }
 
-    public void AddItemStats(BaseItem item, int ilvl)
+    private void AddClassStats()
+    {
+        if (m_characterClass != null)
+        {
+            m_currentStats.attackSpeed += m_characterClass.attackSpeed.Evaluate(m_characterLevel);
+            m_currentStats.block += m_characterClass.block.Evaluate(m_characterLevel);
+            m_currentStats.crit += m_characterClass.crit.Evaluate(m_characterLevel);
+            m_currentStats.dexterity += m_characterClass.dexterity.Evaluate(m_characterLevel);
+            m_currentStats.dodge += m_characterClass.dodge.Evaluate(m_characterLevel);
+            m_currentStats.health += m_characterClass.health.Evaluate(m_characterLevel);
+            m_currentStats.intelligence += m_characterClass.intelligence.Evaluate(m_characterLevel);
+            m_currentStats.strength += m_characterClass.strength.Evaluate(m_characterLevel);
+        }
+    }
+
+    private void AddItemStats(BaseItem item, int ilvl)
     {
         if (item != null)
         {
@@ -59,7 +76,7 @@ public class Hero : MonoBehaviour
         }
     }
 
-    public void AddStat(ItemStat itemStat, int ilvl)
+    private void AddStat(ItemStat itemStat, int ilvl)
     {
         float statPoints = (itemStat.multiplier * ilvl);
         switch (itemStat.stat)

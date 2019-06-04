@@ -240,7 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9776fc34879d8ff4f8de81281eeccfaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_class: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
+  m_characterLevel: 10
+  m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
   m_weaponIlvl: 10
   m_weapon: {fileID: 11400000, guid: 9e00e1d61c56e5d4eae918ed1f22513a, type: 2}
   m_armourIlvl: 0
