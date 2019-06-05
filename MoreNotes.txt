@@ -8,7 +8,7 @@ Beast Master - Pet
 
 
 
-
+3D
 https://assetstore.unity.com/packages/3d/characters/humanoids/ein-simple-pack-130709
 https://assetstore.unity.com/packages/3d/characters/humanoids/pocket-heroes-pack-1-stylized-characters-112941
 https://assetstore.unity.com/publishers/3867/?orderBy=popularity&page=1&plusPro=false&price=0-4000&rating=0&released=0
@@ -17,3 +17,7 @@ https://assetstore.unity.com/packages/3d/characters/humanoids/chibi-female-pack-
 https://assetstore.unity.com/publishers/12755
 https://assetstore.unity.com/packages/3d/characters/humanoids/barbarian-warrior-75519
 https://assetstore.unity.com/packages/3d/characters/humanoids/rpg-character-warrior-archer-wizard-131620
+
+
+2D
+https://assetstore.unity.com/publishers/11086/?orderBy=popularity&page=1&plusPro=false&price=0-4000&rating=0&released=0
