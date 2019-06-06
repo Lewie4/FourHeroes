@@ -21,3 +21,9 @@ https://assetstore.unity.com/packages/3d/characters/humanoids/rpg-character-warr
 
 2D
 https://assetstore.unity.com/publishers/11086
+
+
+Fonts
+https://www.1001fonts.com/baveuse-font.html
+https://www.1001fonts.com/aafia-font.html#styles
+https://www.1001fonts.com/changa-one-font.html#waterfall
