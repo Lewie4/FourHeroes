@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     private Group m_enemyGroup;
 
     private bool m_inCombat;
+    private bool m_playerWin;
 
     private void Awake()
     {
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
     public void StartCombat()
     {
         m_inCombat = true;
+        m_playerWin = false;
 
         m_playerGroup.StartCombat();
         m_enemyGroup.StartCombat();
@@ -91,8 +93,27 @@ public class GameManager : MonoBehaviour
 
     private void CombatControl()
     {
-        m_playerGroup.Combat();
-        m_enemyGroup.Combat();
+        bool playerAlive = m_playerGroup.CheckPartyAlive();
+        bool enemyAlive = m_enemyGroup.CheckPartyAlive();
+
+        if (!enemyAlive)
+        {
+            m_inCombat = false;
+            m_playerWin = true;
+
+            Debug.Log("<color=green> Player has won!</color>");
+        }
+        else if (!playerAlive)
+        {
+            m_inCombat = false;
+            m_playerWin = false;
+            Debug.Log("<color=red> Player has lost!</color>");
+        }
+        else
+        {
+            m_playerGroup.Combat();
+            m_enemyGroup.Combat();
+        }
     }
 
     public Hero RequestOppositionTarget(bool player)

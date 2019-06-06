@@ -55,4 +55,19 @@ public class Group : MonoBehaviour
 
         return m_group[target];
     }
+
+    public bool CheckPartyAlive()
+    {
+        bool isAlive = false;
+
+        for (int i = 0; i < GROUPSIZE; i++)
+        {
+            if (m_group[i].CheckAlive())
+            {
+                isAlive = true;
+                break;
+            }
+        }
+        return isAlive;
+    }
 }
