@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class HeroCombatUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private HeroHealthBarController m_healthBar;
+
+    public void SetupHealth(float health)
     {
-        
+        m_healthBar.Setup(health);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateHealth(float health)
     {
-        
+        m_healthBar.SetHealth(health);
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CombatUIManager : MonoBehaviour
 {
-    [SerializeField] protected HeroHealthBarController[] m_players = new HeroHealthBarController[Group.GROUPSIZE];
-    [SerializeField] protected HeroHealthBarController[] m_enemies = new HeroHealthBarController[Group.GROUPSIZE];
+    [SerializeField] private HeroCombatUI[] m_players = new HeroCombatUI[Group.GROUPSIZE];
+    [SerializeField] private HeroCombatUI[] m_enemies = new HeroCombatUI[Group.GROUPSIZE];
 
     public static CombatUIManager Instance
     {
@@ -34,11 +34,11 @@ public class CombatUIManager : MonoBehaviour
     {
         if (player)
         {
-            m_players[target].Setup(health);
+            m_players[target].SetupHealth(health);
         }
         else
         {
-            m_enemies[target].Setup(health);
+            m_enemies[target].SetupHealth(health);
         }
     }
 
@@ -46,11 +46,11 @@ public class CombatUIManager : MonoBehaviour
     {
         if (player)
         {
-            m_players[target].SetHealth(health);
+            m_players[target].UpdateHealth(health);
         }
         else
         {
-            m_enemies[target].SetHealth(health);
+            m_enemies[target].UpdateHealth(health);
         }
     }
 }
