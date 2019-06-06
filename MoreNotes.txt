@@ -20,4 +20,4 @@ https://assetstore.unity.com/packages/3d/characters/humanoids/rpg-character-warr
 
 
 2D
-https://assetstore.unity.com/publishers/11086/?orderBy=popularity&page=1&plusPro=false&price=0-4000&rating=0&released=0
+https://assetstore.unity.com/publishers/11086
