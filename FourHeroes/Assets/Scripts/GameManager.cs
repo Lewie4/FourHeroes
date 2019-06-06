@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private static string PLAYERSCENE = "Player";
-    private static string ENEMYSCENE = "ENEMY";
+    private static string COMBATSCENE = "Combat";
 
     public static GameManager Instance
     {
@@ -39,14 +38,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        if (m_playerGroup == null)
+        if (m_playerGroup == null || m_enemyGroup == null)
         {
-            SceneManager.LoadSceneAsync(PLAYERSCENE, LoadSceneMode.Additive);
-        }
-
-        if (m_enemyGroup == null)
-        {
-            SceneManager.LoadSceneAsync(ENEMYSCENE, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(COMBATSCENE, LoadSceneMode.Additive);
         }
     }
 
@@ -58,7 +52,8 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(playerGroup);
+
+            Destroy(playerGroup.gameObject);
         }
     }
 
@@ -70,7 +65,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(enemyGroup);
+            Destroy(enemyGroup.gameObject);
         }
     }
 

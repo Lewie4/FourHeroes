@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -120,6 +120,78 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &247507798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247507800}
+  - component: {fileID: 247507799}
+  m_Layer: 0
+  m_Name: TestEnemy2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &247507799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247507798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_characterLevel: 10
+  m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
+  m_weaponIlvl: 10
+  m_weapon: {fileID: 11400000, guid: 85687fcfa3edaa64a93138d8ee3e4cb3, type: 2}
+  m_armourIlvl: 10
+  m_armour: {fileID: 11400000, guid: df0d8b0898245ed48b48927d69ee3e00, type: 2}
+  m_amuletIlvl: 10
+  m_amulet: {fileID: 11400000, guid: 95707f0c003299d47949ee326d66ece5, type: 2}
+  m_relicIlvl: 10
+  m_relic: {fileID: 0}
+  m_currentStats:
+    health: 0
+    strength: 0
+    dexterity: 0
+    intelligence: 0
+    crit: 0
+    dodge: 0
+    block: 0
+    attackSpeed: 0
+  m_combatStats:
+    health: 0
+    strength: 0
+    dexterity: 0
+    intelligence: 0
+    crit: 0
+    dodge: 0
+    block: 0
+    attackSpeed: 0
+  m_timeSinceLastAttack: 0
+--- !u!4 &247507800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247507798}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569868866}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &461909938
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +336,150 @@ MonoBehaviour:
     block: 0
     attackSpeed: 0
   m_timeSinceLastAttack: 0
+--- !u!1 &987655187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 987655189}
+  - component: {fileID: 987655188}
+  m_Layer: 0
+  m_Name: TestEnemy3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &987655188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987655187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_characterLevel: 10
+  m_characterClass: {fileID: 11400000, guid: 5219ad3bda3b578448dc5b595e5a5722, type: 2}
+  m_weaponIlvl: 10
+  m_weapon: {fileID: 11400000, guid: 5bc7740a0502e2844982a719fdeecca6, type: 2}
+  m_armourIlvl: 10
+  m_armour: {fileID: 11400000, guid: 6e7e1a59f626cc747a3ca37537d89ac7, type: 2}
+  m_amuletIlvl: 10
+  m_amulet: {fileID: 11400000, guid: 1390ab432ca75b849be21f358760061d, type: 2}
+  m_relicIlvl: 10
+  m_relic: {fileID: 0}
+  m_currentStats:
+    health: 0
+    strength: 0
+    dexterity: 0
+    intelligence: 0
+    crit: 0
+    dodge: 0
+    block: 0
+    attackSpeed: 0
+  m_combatStats:
+    health: 0
+    strength: 0
+    dexterity: 0
+    intelligence: 0
+    crit: 0
+    dodge: 0
+    block: 0
+    attackSpeed: 0
+  m_timeSinceLastAttack: 0
+--- !u!4 &987655189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987655187}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569868866}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1012415545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012415547}
+  - component: {fileID: 1012415546}
+  m_Layer: 0
+  m_Name: TestEnemy1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1012415546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012415545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_characterLevel: 10
+  m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
+  m_weaponIlvl: 10
+  m_weapon: {fileID: 11400000, guid: 9e00e1d61c56e5d4eae918ed1f22513a, type: 2}
+  m_armourIlvl: 10
+  m_armour: {fileID: 11400000, guid: df0d8b0898245ed48b48927d69ee3e00, type: 2}
+  m_amuletIlvl: 10
+  m_amulet: {fileID: 11400000, guid: 95707f0c003299d47949ee326d66ece5, type: 2}
+  m_relicIlvl: 10
+  m_relic: {fileID: 0}
+  m_currentStats:
+    health: 0
+    strength: 0
+    dexterity: 0
+    intelligence: 0
+    crit: 0
+    dodge: 0
+    block: 0
+    attackSpeed: 0
+  m_combatStats:
+    health: 0
+    strength: 0
+    dexterity: 0
+    intelligence: 0
+    crit: 0
+    dodge: 0
+    block: 0
+    attackSpeed: 0
+  m_timeSinceLastAttack: 0
+--- !u!4 &1012415547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012415545}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569868866}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1235861388
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +604,130 @@ MonoBehaviour:
     block: 0
     attackSpeed: 0
   m_timeSinceLastAttack: 0
+--- !u!1 &1556646154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1556646156}
+  - component: {fileID: 1556646155}
+  m_Layer: 0
+  m_Name: TestEnemy4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1556646155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556646154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_characterLevel: 10
+  m_characterClass: {fileID: 11400000, guid: a4b4766fbe029da4bafe578ce38c6a89, type: 2}
+  m_weaponIlvl: 10
+  m_weapon: {fileID: 11400000, guid: 2888330c3c8aece4f96c4b6440d476ab, type: 2}
+  m_armourIlvl: 10
+  m_armour: {fileID: 11400000, guid: 5156d9864e3bd0b458195810be485f71, type: 2}
+  m_amuletIlvl: 10
+  m_amulet: {fileID: 11400000, guid: 95707f0c003299d47949ee326d66ece5, type: 2}
+  m_relicIlvl: 10
+  m_relic: {fileID: 0}
+  m_currentStats:
+    health: 0
+    strength: 0
+    dexterity: 0
+    intelligence: 0
+    crit: 0
+    dodge: 0
+    block: 0
+    attackSpeed: 0
+  m_combatStats:
+    health: 0
+    strength: 0
+    dexterity: 0
+    intelligence: 0
+    crit: 0
+    dodge: 0
+    block: 0
+    attackSpeed: 0
+  m_timeSinceLastAttack: 0
+--- !u!4 &1556646156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556646154}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569868866}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1569868864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1569868866}
+  - component: {fileID: 1569868865}
+  m_Layer: 0
+  m_Name: EnemyGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1569868865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569868864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ebfe0e642406d4589d29a999c1fad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_group:
+  - {fileID: 1012415546}
+  - {fileID: 247507799}
+  - {fileID: 987655188}
+  - {fileID: 1556646155}
+--- !u!4 &1569868866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569868864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1012415547}
+  - {fileID: 247507800}
+  - {fileID: 987655189}
+  - {fileID: 1556646156}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1834471655
 GameObject:
   m_ObjectHideFlags: 0
