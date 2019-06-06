@@ -46,7 +46,7 @@ public class Group : MonoBehaviour
                 if (damage > 0)
                 {
                     target.TakeDamage(damage);
-                    CombatUIManager.Instance.SetupHealthBar(!IsPlayer(), targetNum, m_group[targetNum].GetHealth());
+                    CombatUIManager.Instance.UpdateHealthBar(!IsPlayer(), targetNum, m_group[targetNum].GetHealth());
                 }
             }
         }
