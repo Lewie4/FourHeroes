@@ -16,6 +16,8 @@ public class Group : MonoBehaviour
             {
                 m_group[i].SetupCombatStats();
                 m_group[i].SetTarget(GameManager.Instance.RequestOppositionTarget(IsPlayer()));
+
+                CombatUIManager.Instance.SetupHealthBar(IsPlayer(), i, m_group[i].GetHealth());
             }
         }
     }
@@ -31,16 +33,31 @@ public class Group : MonoBehaviour
         {
             if (m_group[i] != null)
             {
-                if (!m_group[i].HasTarget())
+                int targetNum = m_group[i].GetTarget();
+                Hero target = GameManager.Instance.GetOppositionTarget(IsPlayer(), targetNum);
+
+                if (target != null && !target.CheckAlive())
                 {
                     m_group[i].SetTarget(GameManager.Instance.RequestOppositionTarget(IsPlayer()));
                 }
-                m_group[i].TryAttack();
+
+                float damage = m_group[i].TryAttack();
+
+                if (damage > 0)
+                {
+                    target.TakeDamage(damage);
+                    CombatUIManager.Instance.SetupHealthBar(!IsPlayer(), targetNum, m_group[targetNum].GetHealth());
+                }
             }
         }
     }
 
-    public Hero GetTarget()
+    public Hero GetTarget(int target)
+    {
+        return m_group[target];
+    }
+
+    public int GetAliveTarget()
     {
         int target = 0;
 
@@ -53,7 +70,7 @@ public class Group : MonoBehaviour
             }
         }
 
-        return m_group[target];
+        return target;
     }
 
     public bool CheckPartyAlive()

@@ -51,7 +51,7 @@ public class Hero : MonoBehaviour
 
     //Combat
     bool m_isAlive = true;
-    Hero m_target;
+    int m_target;
 
     [SerializeField] protected float m_timeSinceLastAttack;
 
@@ -159,22 +159,17 @@ public class Hero : MonoBehaviour
         }
     }
 
-    public bool HasTarget()
-    {
-        if (m_target == null || !m_target.CheckAlive())
-        {
-            return false;
-        }
-
-        return true;
-    }
-
-    public void SetTarget(Hero target)
+    public void SetTarget(int target)
     {
         m_target = target;
     }
 
-    public void TryAttack()
+    public int GetTarget()
+    {
+        return m_target;
+    }
+
+    public float TryAttack()
     {
         if (m_isAlive)
         {
@@ -191,11 +186,12 @@ public class Hero : MonoBehaviour
 
                 float totalDamage = dexDamage + intDamage + strDamage; //TODO: Crit damage
 
-                Debug.Log(gameObject.name + " did " + totalDamage + " damage to " + m_target.gameObject.name);
+                Debug.Log(gameObject.name + " did " + totalDamage + " damage to enemy" + m_target);
 
-                m_target.TakeDamage(totalDamage);
+                return totalDamage;
             }
         }
+        return 0;
     }
 
     private bool CheckCanAttack()
@@ -228,6 +224,11 @@ public class Hero : MonoBehaviour
     public bool CheckAlive()
     {
         return m_isAlive;
+    }
+
+    public float GetHealth()
+    {
+        return m_combatStats.health;
     }
 
 

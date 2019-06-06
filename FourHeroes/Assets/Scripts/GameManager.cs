@@ -111,8 +111,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public Hero RequestOppositionTarget(bool player)
+    public int RequestOppositionTarget(bool player)
     {
-        return player ? m_enemyGroup.GetTarget() : m_playerGroup.GetTarget();
+        return player ? m_enemyGroup.GetAliveTarget() : m_playerGroup.GetAliveTarget();
+    }
+
+    public Hero GetOppositionTarget(bool player, int target)
+    {
+        return player ? m_enemyGroup.GetTarget(target) : m_playerGroup.GetTarget(target);
     }
 }
