@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private static string PLAYERSCENE = "Player";
+    private static string ENEMYSCENE = "ENEMY";
 
     public static GameManager Instance
     {
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     private static GameManager m_instance;
 
     private Group m_playerGroup;
+    private Group m_enemyGroup;
 
     private bool m_inCombat;
 
@@ -40,6 +42,11 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadSceneAsync(PLAYERSCENE, LoadSceneMode.Additive);
         }
+
+        if (m_enemyGroup == null)
+        {
+            SceneManager.LoadSceneAsync(ENEMYSCENE, LoadSceneMode.Additive);
+        }
     }
 
     public void RegisterPlayerGroup(PlayerGroup playerGroup)
@@ -54,11 +61,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void RegisterEnemyGroup(EnemyGroup enemyGroup)
+    {
+        if (m_enemyGroup == null)
+        {
+            m_enemyGroup = enemyGroup;
+        }
+        else
+        {
+            Destroy(enemyGroup);
+        }
+    }
+
     public void StartCombat()
     {
         m_inCombat = true;
 
         m_playerGroup.StartCombat();
+        m_enemyGroup.StartCombat();
     }
 
     private void Update()
@@ -72,5 +92,11 @@ public class GameManager : MonoBehaviour
     private void CombatControl()
     {
         m_playerGroup.Combat();
+        m_enemyGroup.Combat();
+    }
+
+    public Hero RequestOppositionTarget(bool player)
+    {
+        return player ? m_enemyGroup.GetTarget() : m_playerGroup.GetTarget();
     }
 }

@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 461909940}
   - component: {fileID: 461909939}
   m_Layer: 0
-  m_Name: TestPlayer1
+  m_Name: TestEnemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 787914596}
   - component: {fileID: 787914597}
   m_Layer: 0
-  m_Name: TestPlayer3
+  m_Name: TestEnemy3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 1235861390}
   - component: {fileID: 1235861389}
   m_Layer: 0
-  m_Name: PlayerGroup
+  m_Name: EnemyGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1235861388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e40ef0348e3d17f4a99c20ea13a4af8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 54ebfe0e642406d4589d29a999c1fad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_group:
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 1273205349}
   - component: {fileID: 1273205350}
   m_Layer: 0
-  m_Name: TestPlayer2
+  m_Name: TestEnemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 1834471656}
   - component: {fileID: 1834471657}
   m_Layer: 0
-  m_Name: TestPlayer4
+  m_Name: TestEnemy4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerGroup : Group
+public class EnemyGroup : Group
 {
     private void Start()
     {
-        GameManager.Instance.RegisterPlayerGroup(this);
+        GameManager.Instance.RegisterEnemyGroup(this);
     }
 
     public override bool IsPlayer()
     {
-        return true;
+        return false;
     }
 }

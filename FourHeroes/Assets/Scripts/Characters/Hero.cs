@@ -49,9 +49,12 @@ public class Hero : MonoBehaviour
     [SerializeField] protected HeroStats m_currentStats;    //Max current stats 
     [SerializeField] protected HeroStats m_combatStats;     //Stats to be used in combat
 
+    //Combat
+    bool m_isAlive = true;
+    Hero m_target;
+
     [SerializeField] protected float m_timeSinceLastAttack;
 
-    bool m_isAlive = true;
 
     private void Start()
     {
@@ -156,11 +159,27 @@ public class Hero : MonoBehaviour
         }
     }
 
-    public float TryAttack()
+    public bool HasTarget()
+    {
+        if (m_target == null || !m_target.CheckAlive())
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    public void SetTarget(Hero target)
+    {
+        m_target = target;
+    }
+
+    public void TryAttack()
     {
         if (m_isAlive)
         {
             m_timeSinceLastAttack += Time.deltaTime;
+
             if (CheckCanAttack())
             {
                 m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
@@ -172,13 +191,11 @@ public class Hero : MonoBehaviour
 
                 float totalDamage = dexDamage + intDamage + strDamage; //TODO: Crit damage
 
-                Debug.Log(gameObject.name + " did " + totalDamage + " damage!");
+                Debug.Log(gameObject.name + " did " + totalDamage + " damage to " + m_target.gameObject.name);
 
-                return totalDamage;
+                m_target.TakeDamage(totalDamage);
             }
         }
-
-        return 0;
     }
 
     private bool CheckCanAttack()
@@ -204,6 +221,13 @@ public class Hero : MonoBehaviour
     private void Die()
     {
         m_isAlive = false;
+
+        Debug.Log("<color=red>" + gameObject.name + " has died!</color>");
+    }
+
+    public bool CheckAlive()
+    {
+        return m_isAlive;
     }
 
 
