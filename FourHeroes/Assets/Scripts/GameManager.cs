@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     private Group m_playerGroup;
 
+    private bool m_inCombat;
+
     private void Awake()
     {
         if (m_instance != null)
@@ -52,8 +54,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Update()
+    public void StartCombat()
     {
+        m_inCombat = true;
 
+        m_playerGroup.StartCombat();
+    }
+
+    private void Update()
+    {
+        if (m_inCombat)
+        {
+            CombatControl();
+        }
+    }
+
+    private void CombatControl()
+    {
+        m_playerGroup.Combat();
     }
 }

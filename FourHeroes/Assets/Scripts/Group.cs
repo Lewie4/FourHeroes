@@ -8,7 +8,18 @@ public class Group : MonoBehaviour
 
     [SerializeField] private Hero[] m_group = new Hero[GROUPSIZE];
 
-    private void Update()
+    public void StartCombat()
+    {
+        for (int i = 0; i < GROUPSIZE; i++)
+        {
+            if (m_group[i] != null)
+            {
+                m_group[i].SetupCombatStats();
+            }
+        }
+    }
+
+    public void Combat()
     {
         for (int i = 0; i < GROUPSIZE; i++)
         {

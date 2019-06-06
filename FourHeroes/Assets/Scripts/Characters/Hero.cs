@@ -15,6 +15,23 @@ public class Hero : MonoBehaviour
         public float dodge;
         public float block;
         public float attackSpeed;
+
+        public HeroStats()
+        {
+
+        }
+
+        public HeroStats(HeroStats stats)
+        {
+            health = stats.health;
+            strength = stats.strength;
+            dexterity = stats.dexterity;
+            intelligence = stats.intelligence;
+            crit = stats.crit;
+            dodge = stats.dodge;
+            block = stats.block;
+            attackSpeed = stats.attackSpeed;
+        }
     }
 
     [SerializeField] int m_characterLevel;
@@ -29,9 +46,12 @@ public class Hero : MonoBehaviour
     [SerializeField] Relic m_relic;
 
     //Everything below is only shown for debugging
-    [SerializeField] protected HeroStats m_currentStats;
+    [SerializeField] protected HeroStats m_currentStats;    //Max current stats 
+    [SerializeField] protected HeroStats m_combatStats;     //Stats to be used in combat
 
     [SerializeField] protected float m_timeSinceLastAttack;
+
+    bool m_isAlive = true;
 
     private void Start()
     {
@@ -70,7 +90,7 @@ public class Hero : MonoBehaviour
 
     private void AddItemStats(BaseItem item, int ilvl)
     {
-        //Check I have the right level for the item
+        //TODO: Check I have the right level for the item
         if (item != null)
         {
             AddStat(item.stat1, ilvl);
@@ -78,6 +98,11 @@ public class Hero : MonoBehaviour
             AddStat(item.stat3, ilvl);
             AddStat(item.stat4, ilvl);
         }
+    }
+
+    public void SetupCombatStats()
+    {
+        m_combatStats = new HeroStats(m_currentStats);
     }
 
     private void AddStat(ItemStat itemStat, int ilvl)
@@ -133,27 +158,30 @@ public class Hero : MonoBehaviour
 
     public float TryAttack()
     {
-        m_timeSinceLastAttack += Time.deltaTime;
-        if (CheckCanAttack())
+        if (m_isAlive)
         {
-            m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
-            float dexDamage = m_currentStats.dexterity * m_characterClass.multiplier.dexterityMult;
-            float intDamage = m_currentStats.intelligence * m_characterClass.multiplier.intelligenceMult;
-            float strDamage = m_currentStats.strength * m_characterClass.multiplier.strengthMult;
+            m_timeSinceLastAttack += Time.deltaTime;
+            if (CheckCanAttack())
+            {
+                m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
+                float dexDamage = m_currentStats.dexterity * m_characterClass.multiplier.dexterityMult;
+                float intDamage = m_currentStats.intelligence * m_characterClass.multiplier.intelligenceMult;
+                float strDamage = m_currentStats.strength * m_characterClass.multiplier.strengthMult;
 
-            //TODO:Crit chance
+                //TODO:Crit chance
 
-            float totalDamage = dexDamage + intDamage + strDamage; //TODO: Crit damage
+                float totalDamage = dexDamage + intDamage + strDamage; //TODO: Crit damage
 
-            Debug.Log(gameObject.name + " did " + totalDamage + " damage!");
+                Debug.Log(gameObject.name + " did " + totalDamage + " damage!");
 
-            return totalDamage;
+                return totalDamage;
+            }
         }
 
         return 0;
     }
 
-    protected bool CheckCanAttack()
+    private bool CheckCanAttack()
     {
         if (m_timeSinceLastAttack > m_currentStats.attackSpeed)
         {
@@ -161,4 +189,29 @@ public class Hero : MonoBehaviour
         }
         return false;
     }
+
+    public void TakeDamage(float damage)
+    {
+        m_combatStats.health -= damage;
+
+        if (m_combatStats.health <= 0)
+        {
+            m_combatStats.health = 0;
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        m_isAlive = false;
+    }
+
+
+#if UNITY_EDITOR
+    [ContextMenu("Kill Hero")]
+    public void DebugKillHero()
+    {
+        TakeDamage(m_currentStats.health);
+    }
+#endif
 }
