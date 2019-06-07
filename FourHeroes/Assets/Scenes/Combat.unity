@@ -530,28 +530,28 @@ MonoBehaviour:
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
   m_weapon:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_armour:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_amulet:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_relic:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
@@ -925,28 +925,28 @@ MonoBehaviour:
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
   m_weapon:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 11400000, guid: a73bff289da9929459894b06707a948d, type: 2}
     ilvl: 0
-    stat1: 0
+    stat1: 4
     stat2: 0
     stat3: 0
     stat4: 0
   m_armour:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_amulet:
-    statMult: {fileID: 11400000, guid: dc4334685eefa6c48a6ef10e66d1a431, type: 2}
+    itemStats: {fileID: 0}
     ilvl: 15
     stat1: 4
     stat2: 8
     stat3: 0
     stat4: 0
   m_relic:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
@@ -1406,28 +1406,28 @@ MonoBehaviour:
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: 5219ad3bda3b578448dc5b595e5a5722, type: 2}
   m_weapon:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_armour:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_amulet:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_relic:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
@@ -1648,28 +1648,28 @@ MonoBehaviour:
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: 5219ad3bda3b578448dc5b595e5a5722, type: 2}
   m_weapon:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_armour:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_amulet:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_relic:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
@@ -1843,28 +1843,28 @@ MonoBehaviour:
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
   m_weapon:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_armour:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_amulet:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_relic:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
@@ -2243,28 +2243,28 @@ MonoBehaviour:
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
   m_weapon:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_armour:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_amulet:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_relic:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
@@ -2783,28 +2783,28 @@ MonoBehaviour:
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: a4b4766fbe029da4bafe578ce38c6a89, type: 2}
   m_weapon:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_armour:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_amulet:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_relic:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
@@ -3482,28 +3482,28 @@ MonoBehaviour:
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: a4b4766fbe029da4bafe578ce38c6a89, type: 2}
   m_weapon:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_armour:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_amulet:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
     stat3: 0
     stat4: 0
   m_relic:
-    statMult: {fileID: 0}
+    itemStats: {fileID: 0}
     ilvl: 0
     stat1: 0
     stat2: 0
