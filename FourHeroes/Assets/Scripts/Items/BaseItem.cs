@@ -49,7 +49,6 @@ public class StatPossibility
 public class BaseItem : ScriptableObject
 {
     public ItemType itemType;
-    public ItemQuality quality;
     public ItemStatMultiplier statMultiplier;
 
     [Header("Item Stats")]
