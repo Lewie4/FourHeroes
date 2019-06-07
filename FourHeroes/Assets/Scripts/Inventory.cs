@@ -31,7 +31,7 @@ public class Inventory : ScriptableObject
 
     private static Inventory m_instance;
 
-    public ItemInstance[] inventory;
+    public ItemInstance[] m_itemInventory;
 
     public static void InitializeFromDefault()
     {
@@ -62,7 +62,7 @@ public class Inventory : ScriptableObject
 
     public bool SlotEmpty(int index)
     {
-        if (inventory[index] == null || inventory[index].statMult == null)
+        if (m_itemInventory[index] == null || m_itemInventory[index].itemStats == null)
         {
             return true;
         }
@@ -79,7 +79,7 @@ public class Inventory : ScriptableObject
             return false;
         }
 
-        item = inventory[index];
+        item = m_itemInventory[index];
         return true;
     }
 
@@ -90,18 +90,18 @@ public class Inventory : ScriptableObject
             return false;
         }
 
-        inventory[index] = null;
+        m_itemInventory[index] = null;
 
         return true;
     }
 
     public int InsertItem(ItemInstance item)
     {
-        for (int i = 0; i < inventory.Length; i++)
+        for (int i = 0; i < m_itemInventory.Length; i++)
         {
             if (SlotEmpty(i))
             {
-                inventory[i] = item;
+                m_itemInventory[i] = item;
                 return i;
             }
         }

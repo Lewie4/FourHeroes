@@ -92,10 +92,10 @@ public class Hero : MonoBehaviour
         //TODO: Check I have the right level for the item
         if (item != null)
         {
-            AddStat(item.stat1, item.statMult.statMultiplier1, item.ilvl);
-            AddStat(item.stat2, item.statMult.statMultiplier2, item.ilvl);
-            AddStat(item.stat3, item.statMult.statMultiplier3, item.ilvl);
-            AddStat(item.stat4, item.statMult.statMultiplier4, item.ilvl);
+            AddStat(item.stat1, item.itemStats.stat1, item.ilvl);
+            AddStat(item.stat2, item.itemStats.stat2, item.ilvl);
+            AddStat(item.stat3, item.itemStats.stat3, item.ilvl);
+            AddStat(item.stat4, item.itemStats.stat4, item.ilvl);
         }
     }
 
