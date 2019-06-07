@@ -35,6 +35,7 @@ public enum Stat
 public class BaseItem : ScriptableObject
 {
     public ItemType itemType;
+    public ItemQuality itemQuality;
 
     [Header("Item Stats")]
     public StatMultiplier stat1;
