@@ -31,7 +31,7 @@ public class Inventory : ScriptableObject
 
     private static Inventory m_instance;
 
-    public ItemInstance[] m_itemInventory;
+    [SerializeField] private ItemInstance[] m_itemInventory;
 
     public static void InitializeFromDefault()
     {
@@ -69,7 +69,6 @@ public class Inventory : ScriptableObject
 
         return false;
     }
-
 
     public bool GetItem(int index, out ItemInstance item)
     {
