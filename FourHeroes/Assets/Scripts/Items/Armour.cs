@@ -9,6 +9,7 @@ public enum ArmourType
     Plate,
 }
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "CArmour1", menuName = "Items/Armour")]
 public class Armour : BaseItem
 {

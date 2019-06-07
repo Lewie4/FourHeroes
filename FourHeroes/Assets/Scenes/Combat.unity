@@ -529,14 +529,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
-  m_weaponIlvl: 10
-  m_weapon: {fileID: 11400000, guid: 85687fcfa3edaa64a93138d8ee3e4cb3, type: 2}
-  m_armourIlvl: 10
-  m_armour: {fileID: 11400000, guid: df0d8b0898245ed48b48927d69ee3e00, type: 2}
-  m_amuletIlvl: 10
-  m_amulet: {fileID: 11400000, guid: 95707f0c003299d47949ee326d66ece5, type: 2}
-  m_relicIlvl: 10
-  m_relic: {fileID: 0}
+  m_weapon:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_armour:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_amulet:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_relic:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -904,14 +924,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
-  m_weaponIlvl: 10
-  m_weapon: {fileID: 11400000, guid: 9e00e1d61c56e5d4eae918ed1f22513a, type: 2}
-  m_armourIlvl: 10
-  m_armour: {fileID: 11400000, guid: df0d8b0898245ed48b48927d69ee3e00, type: 2}
-  m_amuletIlvl: 10
-  m_amulet: {fileID: 11400000, guid: 95707f0c003299d47949ee326d66ece5, type: 2}
-  m_relicIlvl: 10
-  m_relic: {fileID: 0}
+  m_weapon:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_armour:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_amulet:
+    statMult: {fileID: 11400000, guid: dc4334685eefa6c48a6ef10e66d1a431, type: 2}
+    ilvl: 15
+    stat1: 4
+    stat2: 8
+    stat3: 0
+    stat4: 0
+  m_relic:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -1365,14 +1405,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: 5219ad3bda3b578448dc5b595e5a5722, type: 2}
-  m_weaponIlvl: 10
-  m_weapon: {fileID: 11400000, guid: 5bc7740a0502e2844982a719fdeecca6, type: 2}
-  m_armourIlvl: 10
-  m_armour: {fileID: 11400000, guid: 6e7e1a59f626cc747a3ca37537d89ac7, type: 2}
-  m_amuletIlvl: 10
-  m_amulet: {fileID: 11400000, guid: 1390ab432ca75b849be21f358760061d, type: 2}
-  m_relicIlvl: 10
-  m_relic: {fileID: 0}
+  m_weapon:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_armour:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_amulet:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_relic:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -1587,14 +1647,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: 5219ad3bda3b578448dc5b595e5a5722, type: 2}
-  m_weaponIlvl: 10
-  m_weapon: {fileID: 11400000, guid: 5bc7740a0502e2844982a719fdeecca6, type: 2}
-  m_armourIlvl: 10
-  m_armour: {fileID: 11400000, guid: 6e7e1a59f626cc747a3ca37537d89ac7, type: 2}
-  m_amuletIlvl: 10
-  m_amulet: {fileID: 11400000, guid: 1390ab432ca75b849be21f358760061d, type: 2}
-  m_relicIlvl: 10
-  m_relic: {fileID: 0}
+  m_weapon:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_armour:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_amulet:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_relic:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -1762,14 +1842,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
-  m_weaponIlvl: 10
-  m_weapon: {fileID: 11400000, guid: 9e00e1d61c56e5d4eae918ed1f22513a, type: 2}
-  m_armourIlvl: 10
-  m_armour: {fileID: 11400000, guid: df0d8b0898245ed48b48927d69ee3e00, type: 2}
-  m_amuletIlvl: 10
-  m_amulet: {fileID: 11400000, guid: 95707f0c003299d47949ee326d66ece5, type: 2}
-  m_relicIlvl: 10
-  m_relic: {fileID: 0}
+  m_weapon:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_armour:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_amulet:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_relic:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -2142,14 +2242,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
-  m_weaponIlvl: 10
-  m_weapon: {fileID: 11400000, guid: 85687fcfa3edaa64a93138d8ee3e4cb3, type: 2}
-  m_armourIlvl: 10
-  m_armour: {fileID: 11400000, guid: df0d8b0898245ed48b48927d69ee3e00, type: 2}
-  m_amuletIlvl: 10
-  m_amulet: {fileID: 11400000, guid: 95707f0c003299d47949ee326d66ece5, type: 2}
-  m_relicIlvl: 10
-  m_relic: {fileID: 0}
+  m_weapon:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_armour:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_amulet:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_relic:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -2662,14 +2782,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: a4b4766fbe029da4bafe578ce38c6a89, type: 2}
-  m_weaponIlvl: 10
-  m_weapon: {fileID: 11400000, guid: 2888330c3c8aece4f96c4b6440d476ab, type: 2}
-  m_armourIlvl: 10
-  m_armour: {fileID: 11400000, guid: 5156d9864e3bd0b458195810be485f71, type: 2}
-  m_amuletIlvl: 10
-  m_amulet: {fileID: 11400000, guid: 95707f0c003299d47949ee326d66ece5, type: 2}
-  m_relicIlvl: 10
-  m_relic: {fileID: 0}
+  m_weapon:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_armour:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_amulet:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_relic:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -3341,14 +3481,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_characterLevel: 10
   m_characterClass: {fileID: 11400000, guid: a4b4766fbe029da4bafe578ce38c6a89, type: 2}
-  m_weaponIlvl: 10
-  m_weapon: {fileID: 11400000, guid: 2888330c3c8aece4f96c4b6440d476ab, type: 2}
-  m_armourIlvl: 10
-  m_armour: {fileID: 11400000, guid: 5156d9864e3bd0b458195810be485f71, type: 2}
-  m_amuletIlvl: 10
-  m_amulet: {fileID: 11400000, guid: 95707f0c003299d47949ee326d66ece5, type: 2}
-  m_relicIlvl: 10
-  m_relic: {fileID: 0}
+  m_weapon:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_armour:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_amulet:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
+  m_relic:
+    statMult: {fileID: 0}
+    ilvl: 0
+    stat1: 0
+    stat2: 0
+    stat3: 0
+    stat4: 0
   m_currentStats:
     health: 0
     strength: 0

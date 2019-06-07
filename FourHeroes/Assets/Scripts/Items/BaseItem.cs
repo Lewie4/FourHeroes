@@ -32,23 +32,31 @@ public enum Stat
 }
 
 [System.Serializable]
-public class ItemStat
+public class StatPossibility
 {
-    public Stat stat;
-    public float value;
+    public bool health;
+    public bool strength;
+    public bool dexterity;
+    public bool intelligence;
+
+    public bool crit;
+    public bool dodge;
+    public bool block;
+    public bool attackSpeed;
 }
 
-
+[System.Serializable]
 public class BaseItem : ScriptableObject
 {
     public ItemType itemType;
     public ItemQuality quality;
+    public ItemStatMultiplier statMultiplier;
 
     [Header("Item Stats")]
-    public ItemStat stat1;
-    public ItemStat stat2;
-    public ItemStat stat3;
-    public ItemStat stat4;
+    public StatPossibility stat1;
+    public StatPossibility stat2;
+    public StatPossibility stat3;
+    public StatPossibility stat4;
     public int specialAbility;   //TODO: Replace with special ability (Mainly for Relics)
 
 }

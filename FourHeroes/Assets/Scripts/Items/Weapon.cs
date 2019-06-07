@@ -10,6 +10,7 @@ public enum WeaponType
     Bow,
 }
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "CWeapon1", menuName = "Items/Weapon")]
 public class Weapon : BaseItem
 {

@@ -36,14 +36,10 @@ public class Hero : MonoBehaviour
 
     [SerializeField] int m_characterLevel;
     [SerializeField] ClassData m_characterClass;
-    [SerializeField] int m_weaponIlvl;
-    [SerializeField] Weapon m_weapon;
-    [SerializeField] int m_armourIlvl;
-    [SerializeField] Armour m_armour;
-    [SerializeField] int m_amuletIlvl;
-    [SerializeField] Amulet m_amulet;
-    [SerializeField] int m_relicIlvl;
-    [SerializeField] Relic m_relic;
+    [SerializeField] ItemInstance m_weapon;
+    [SerializeField] ItemInstance m_armour;
+    [SerializeField] ItemInstance m_amulet;
+    [SerializeField] ItemInstance m_relic;
 
     //Everything below is only shown for debugging
     [SerializeField] protected HeroStats m_currentStats;    //Max current stats 
@@ -70,10 +66,10 @@ public class Hero : MonoBehaviour
     {
         ClearStats();
         AddClassStats();
-        AddItemStats(m_amulet, m_amuletIlvl);
-        AddItemStats(m_armour, m_armourIlvl);
-        AddItemStats(m_relic, m_relicIlvl);
-        AddItemStats(m_weapon, m_weaponIlvl);
+        AddItemStats(m_amulet);
+        AddItemStats(m_armour);
+        AddItemStats(m_relic);
+        AddItemStats(m_weapon);
     }
 
     private void AddClassStats()
@@ -91,15 +87,15 @@ public class Hero : MonoBehaviour
         }
     }
 
-    private void AddItemStats(BaseItem item, int ilvl)
+    private void AddItemStats(ItemInstance item)
     {
         //TODO: Check I have the right level for the item
         if (item != null)
         {
-            AddStat(item.stat1, ilvl);
-            AddStat(item.stat2, ilvl);
-            AddStat(item.stat3, ilvl);
-            AddStat(item.stat4, ilvl);
+            AddStat(item.stat1, item.statMult.statMultiplier1, item.ilvl);
+            AddStat(item.stat2, item.statMult.statMultiplier2, item.ilvl);
+            AddStat(item.stat3, item.statMult.statMultiplier3, item.ilvl);
+            AddStat(item.stat4, item.statMult.statMultiplier4, item.ilvl);
         }
     }
 
@@ -108,48 +104,48 @@ public class Hero : MonoBehaviour
         m_combatStats = new HeroStats(m_currentStats);
     }
 
-    private void AddStat(ItemStat itemStat, int ilvl)
+    private void AddStat(Stat itemStat, StatMultiplier statMult, int ilvl)
     {
-        switch (itemStat.stat)
+        switch (itemStat)
         {
             case Stat.AttackSpeed:
                 {
-                    m_currentStats.attackSpeed -= itemStat.value;
+                    m_currentStats.attackSpeed -= statMult.attackSpeedMult;
                     break;
                 }
             case Stat.Block:
                 {
-                    m_currentStats.block += itemStat.value;
+                    m_currentStats.block += statMult.blockMult;
                     break;
                 }
             case Stat.Crit:
                 {
-                    m_currentStats.crit += itemStat.value;
+                    m_currentStats.crit += statMult.critMult;
                     break;
                 }
             case Stat.Dexterity:
                 {
-                    m_currentStats.dexterity += itemStat.value * ilvl;
+                    m_currentStats.dexterity += statMult.dexterityMult * ilvl;
                     break;
                 }
             case Stat.Dodge:
                 {
-                    m_currentStats.dodge += itemStat.value;
+                    m_currentStats.dodge += statMult.dodgeMult;
                     break;
                 }
             case Stat.Health:
                 {
-                    m_currentStats.health += itemStat.value * ilvl;
+                    m_currentStats.health += statMult.healthMult * ilvl;
                     break;
                 }
             case Stat.Intelligence:
                 {
-                    m_currentStats.intelligence += itemStat.value * ilvl;
+                    m_currentStats.intelligence += statMult.intelligenceMult * ilvl;
                     break;
                 }
             case Stat.Strength:
                 {
-                    m_currentStats.strength += itemStat.value * ilvl;
+                    m_currentStats.strength += statMult.strengthMult * ilvl;
                     break;
                 }
             default:
@@ -178,9 +174,9 @@ public class Hero : MonoBehaviour
             if (CheckCanAttack())
             {
                 m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
-                float dexDamage = m_currentStats.dexterity * m_characterClass.multiplier.dexterityMult;
-                float intDamage = m_currentStats.intelligence * m_characterClass.multiplier.intelligenceMult;
-                float strDamage = m_currentStats.strength * m_characterClass.multiplier.strengthMult;
+                float dexDamage = m_currentStats.dexterity * m_characterClass.multiplier.statMultiplier.dexterityMult;
+                float intDamage = m_currentStats.intelligence * m_characterClass.multiplier.statMultiplier.intelligenceMult;
+                float strDamage = m_currentStats.strength * m_characterClass.multiplier.statMultiplier.strengthMult;
 
                 //TODO:Crit chance
 
