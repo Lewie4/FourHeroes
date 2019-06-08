@@ -527,36 +527,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_characterLevel: 10
-  m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
-  m_weapon:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_armour:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_amulet:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_relic:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
+  m_heroData:
+    characterLevel: 0
+    characterClass: {fileID: 0}
+    weapon:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    armour:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    amulet:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    relic:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -922,36 +923,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_characterLevel: 10
-  m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
-  m_weapon:
-    itemStats: {fileID: 11400000, guid: a73bff289da9929459894b06707a948d, type: 2}
-    ilvl: 0
-    stat1: 4
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_armour:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_amulet:
-    itemStats: {fileID: 0}
-    ilvl: 15
-    stat1: 4
-    stat2: 8
-    stat3: 0
-    stat4: 0
-  m_relic:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
+  m_heroData:
+    characterLevel: 15
+    characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
+    weapon:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    armour:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    amulet:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    relic:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -1403,36 +1405,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_characterLevel: 10
-  m_characterClass: {fileID: 11400000, guid: 5219ad3bda3b578448dc5b595e5a5722, type: 2}
-  m_weapon:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_armour:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_amulet:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_relic:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
+  m_heroData:
+    characterLevel: 12
+    characterClass: {fileID: 11400000, guid: 5219ad3bda3b578448dc5b595e5a5722, type: 2}
+    weapon:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    armour:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    amulet:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    relic:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -1645,36 +1648,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_characterLevel: 10
-  m_characterClass: {fileID: 11400000, guid: 5219ad3bda3b578448dc5b595e5a5722, type: 2}
-  m_weapon:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_armour:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_amulet:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_relic:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
+  m_heroData:
+    characterLevel: 0
+    characterClass: {fileID: 0}
+    weapon:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    armour:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    amulet:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    relic:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -1840,36 +1844,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_characterLevel: 10
-  m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
-  m_weapon:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_armour:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_amulet:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_relic:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
+  m_heroData:
+    characterLevel: 0
+    characterClass: {fileID: 0}
+    weapon:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    armour:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    amulet:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    relic:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -2240,36 +2245,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_characterLevel: 10
-  m_characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
-  m_weapon:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_armour:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_amulet:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_relic:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
+  m_heroData:
+    characterLevel: 7
+    characterClass: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
+    weapon:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    armour:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    amulet:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    relic:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -2780,36 +2786,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_characterLevel: 10
-  m_characterClass: {fileID: 11400000, guid: a4b4766fbe029da4bafe578ce38c6a89, type: 2}
-  m_weapon:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_armour:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_amulet:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_relic:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
+  m_heroData:
+    characterLevel: 0
+    characterClass: {fileID: 0}
+    weapon:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    armour:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    amulet:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    relic:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
   m_currentStats:
     health: 0
     strength: 0
@@ -3479,36 +3486,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0dd89a0ba188f4f8bd258d6a181923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_characterLevel: 10
-  m_characterClass: {fileID: 11400000, guid: a4b4766fbe029da4bafe578ce38c6a89, type: 2}
-  m_weapon:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_armour:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_amulet:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
-  m_relic:
-    itemStats: {fileID: 0}
-    ilvl: 0
-    stat1: 0
-    stat2: 0
-    stat3: 0
-    stat4: 0
+  m_heroData:
+    characterLevel: 8
+    characterClass: {fileID: 11400000, guid: a4b4766fbe029da4bafe578ce38c6a89, type: 2}
+    weapon:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    armour:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    amulet:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+    relic:
+      itemStats: {fileID: 0}
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
   m_currentStats:
     health: 0
     strength: 0

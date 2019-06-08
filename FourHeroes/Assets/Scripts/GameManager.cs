@@ -36,6 +36,12 @@ public class GameManager : MonoBehaviour
         m_instance = this;
     }
 
+    public static void SaveAll()
+    {
+        SaveManager.SaveHeroes();
+        SaveManager.SaveInventory();
+    }
+
     private void Start()
     {
         if (m_playerGroup == null || m_enemyGroup == null)
@@ -120,4 +126,12 @@ public class GameManager : MonoBehaviour
     {
         return player ? m_enemyGroup.GetTarget(target) : m_playerGroup.GetTarget(target);
     }
+
+#if UNITY_EDITOR
+    [ContextMenu("Save All")]
+    public void DebugSaveAll()
+    {
+        SaveAll();
+    }
+#endif
 }

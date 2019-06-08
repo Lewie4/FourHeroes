@@ -24,8 +24,22 @@ public class SaveManager
         Inventory.Instance.SaveToJSON(Path.Combine(Application.persistentDataPath, "inventory.json"));
     }
 
-    public static void LoadFromTemplate()
+    public static void LoadOrInitializeHeroes()
     {
-        Inventory.InitializeFromDefault();
+        if (File.Exists(Path.Combine(Application.persistentDataPath, "heroes.json")))
+        {
+            Debug.Log("Found file heroes.json, loading heroes.");
+            Heroes.LoadFromJSON(Path.Combine(Application.persistentDataPath, "heroes.json"));
+        }
+        else
+        {
+            Debug.Log("Couldn't find heroes.json, heroes from template.");
+            Heroes.InitializeFromDefault();
+        }
+    }
+
+    public static void SaveHeroes()
+    {
+        Heroes.Instance.SaveToJSON(Path.Combine(Application.persistentDataPath, "heroes.json"));
     }
 }

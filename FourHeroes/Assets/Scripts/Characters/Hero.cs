@@ -2,6 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class HeroData
+{
+    public int characterLevel;
+    public ClassData characterClass;
+    public ItemInstance weapon;
+    public ItemInstance armour;
+    public ItemInstance amulet;
+    public ItemInstance relic;
+}
+
 public class Hero : MonoBehaviour
 {
     [System.Serializable]
@@ -34,12 +45,7 @@ public class Hero : MonoBehaviour
         }
     }
 
-    [SerializeField] int m_characterLevel;
-    [SerializeField] ClassData m_characterClass;
-    [SerializeField] ItemInstance m_weapon;
-    [SerializeField] ItemInstance m_armour;
-    [SerializeField] ItemInstance m_amulet;
-    [SerializeField] ItemInstance m_relic;
+    [SerializeField] private HeroData m_heroData;
 
     //Everything below is only shown for debugging
     [SerializeField] protected HeroStats m_currentStats;    //Max current stats 
@@ -54,6 +60,7 @@ public class Hero : MonoBehaviour
 
     private void Start()
     {
+        //Heroes.Instance.AddHero(m_heroData);
         SetupStats();
     }
 
@@ -66,24 +73,24 @@ public class Hero : MonoBehaviour
     {
         ClearStats();
         AddClassStats();
-        AddItemStats(m_amulet);
-        AddItemStats(m_armour);
-        AddItemStats(m_relic);
-        AddItemStats(m_weapon);
+        AddItemStats(m_heroData.amulet);
+        AddItemStats(m_heroData.armour);
+        AddItemStats(m_heroData.relic);
+        AddItemStats(m_heroData.weapon);
     }
 
     private void AddClassStats()
     {
-        if (m_characterClass != null)
+        if (m_heroData.characterClass != null)
         {
-            m_currentStats.attackSpeed += m_characterClass.attackSpeed.Evaluate(m_characterLevel);
-            m_currentStats.block += m_characterClass.block.Evaluate(m_characterLevel);
-            m_currentStats.crit += m_characterClass.crit.Evaluate(m_characterLevel);
-            m_currentStats.dexterity += m_characterClass.dexterity.Evaluate(m_characterLevel);
-            m_currentStats.dodge += m_characterClass.dodge.Evaluate(m_characterLevel);
-            m_currentStats.health += m_characterClass.health.Evaluate(m_characterLevel);
-            m_currentStats.intelligence += m_characterClass.intelligence.Evaluate(m_characterLevel);
-            m_currentStats.strength += m_characterClass.strength.Evaluate(m_characterLevel);
+            m_currentStats.attackSpeed += m_heroData.characterClass.attackSpeed.Evaluate(m_heroData.characterLevel);
+            m_currentStats.block += m_heroData.characterClass.block.Evaluate(m_heroData.characterLevel);
+            m_currentStats.crit += m_heroData.characterClass.crit.Evaluate(m_heroData.characterLevel);
+            m_currentStats.dexterity += m_heroData.characterClass.dexterity.Evaluate(m_heroData.characterLevel);
+            m_currentStats.dodge += m_heroData.characterClass.dodge.Evaluate(m_heroData.characterLevel);
+            m_currentStats.health += m_heroData.characterClass.health.Evaluate(m_heroData.characterLevel);
+            m_currentStats.intelligence += m_heroData.characterClass.intelligence.Evaluate(m_heroData.characterLevel);
+            m_currentStats.strength += m_heroData.characterClass.strength.Evaluate(m_heroData.characterLevel);
         }
     }
 
@@ -155,6 +162,11 @@ public class Hero : MonoBehaviour
         }
     }
 
+    public ClassData GetCharacterClassData()
+    {
+        return m_heroData.characterClass;
+    }
+
     public void SetTarget(int target)
     {
         m_target = target;
@@ -174,9 +186,9 @@ public class Hero : MonoBehaviour
             if (CheckCanAttack())
             {
                 m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
-                float dexDamage = m_currentStats.dexterity * m_characterClass.multiplier.statMultiplier.dexterityMult;
-                float intDamage = m_currentStats.intelligence * m_characterClass.multiplier.statMultiplier.intelligenceMult;
-                float strDamage = m_currentStats.strength * m_characterClass.multiplier.statMultiplier.strengthMult;
+                float dexDamage = m_currentStats.dexterity * m_heroData.characterClass.multiplier.statMultiplier.dexterityMult;
+                float intDamage = m_currentStats.intelligence * m_heroData.characterClass.multiplier.statMultiplier.intelligenceMult;
+                float strDamage = m_currentStats.strength * m_heroData.characterClass.multiplier.statMultiplier.strengthMult;
 
                 //TODO:Crit chance
 

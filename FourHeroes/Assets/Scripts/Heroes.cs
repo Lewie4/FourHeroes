@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Player/Inventory", fileName = "InventoryTemplate.asset")]
+[CreateAssetMenu(menuName = "Player/Heroes", fileName = "HeroesTemplate.asset")]
 [System.Serializable]
-public class Inventory : ScriptableObject
+public class Heroes : ScriptableObject
 {
-    public static Inventory Instance
+    public static Heroes Instance
     {
         get
         {
             if (!m_instance)
             {
-                Inventory[] tmp = Resources.FindObjectsOfTypeAll<Inventory>();
+                Heroes[] tmp = Resources.FindObjectsOfTypeAll<Heroes>();
                 if (tmp.Length > 0)
                 {
                     m_instance = tmp[0];
-                    Debug.Log("Found inventory as: " + m_instance);
+                    Debug.Log("Found heroes as: " + m_instance);
                 }
                 else
                 {
-                    Debug.Log("Did not find inventory, loading from file or template.");
-                    SaveManager.LoadOrInitializeInventory();
+                    Debug.Log("Did not find heroes, loading from file or template.");
+                    SaveManager.LoadOrInitializeHeroes();
                 }
             }
 
@@ -29,9 +29,9 @@ public class Inventory : ScriptableObject
         }
     }
 
-    private static Inventory m_instance;
+    private static Heroes m_instance;
 
-    [SerializeField] private List<ItemInstance> m_itemInventory;
+    [SerializeField] private List<HeroData> m_heroes;
 
     public static void InitializeFromDefault()
     {
@@ -39,7 +39,7 @@ public class Inventory : ScriptableObject
         {
             DestroyImmediate(m_instance);
         }
-        m_instance = Instantiate((Inventory)Resources.Load("InventoryTemplate"));
+        m_instance = Instantiate((Heroes)Resources.Load("HeroesTemplate"));
         m_instance.hideFlags = HideFlags.HideAndDontSave;
     }
 
@@ -49,20 +49,20 @@ public class Inventory : ScriptableObject
         {
             DestroyImmediate(m_instance);
         }
-        m_instance = ScriptableObject.CreateInstance<Inventory>();
+        m_instance = ScriptableObject.CreateInstance<Heroes>();
         JsonUtility.FromJsonOverwrite(System.IO.File.ReadAllText(path), m_instance);
         m_instance.hideFlags = HideFlags.HideAndDontSave;
     }
 
     public void SaveToJSON(string path)
     {
-        Debug.LogFormat("Saving inventory to {0}", path);
+        Debug.LogFormat("Saving heroes to {0}", path);
         System.IO.File.WriteAllText(path, JsonUtility.ToJson(this, true));
     }
 
     public bool SlotEmpty(int index)
     {
-        if (m_itemInventory[index] == null || m_itemInventory[index].itemStats == null)
+        if (m_heroes[index] == null || m_heroes[index].characterClass == null || m_heroes[index].characterLevel <= 0)
         {
             return true;
         }
@@ -70,44 +70,44 @@ public class Inventory : ScriptableObject
         return false;
     }
 
-    public bool GetItem(int index, out ItemInstance item)
+    public bool GetHero(int index, out HeroData hero)
     {
         if (SlotEmpty(index))
         {
-            item = null;
+            hero = null;
             return false;
         }
 
-        item = m_itemInventory[index];
+        hero = m_heroes[index];
         return true;
     }
 
-    public bool RemoveItem(int index)
+    public bool RemoveHero(int index)
     {
         if (SlotEmpty(index))
         {
             return false;
         }
 
-        m_itemInventory[index] = null;
+        m_heroes[index] = null;
 
         return true;
     }
 
-    public int InsertItem(ItemInstance item)
+    public int AddHero(HeroData hero)
     {
-        for (int i = 0; i < m_itemInventory.Count; i++)
+        for (int i = 0; i < m_heroes.Count; i++)
         {
             if (SlotEmpty(i))
             {
-                m_itemInventory[i] = item;
+                m_heroes[i] = hero;
                 return i;
             }
         }
 
-        m_itemInventory.Add(item);
+        m_heroes.Add(hero);
 
-        return m_itemInventory.Count - 1;
+        return m_heroes.Count - 1;
     }
 
     private void Save()
