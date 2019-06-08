@@ -31,6 +31,8 @@ public class Inventory : ScriptableObject
 
     private static Inventory m_instance;
 
+    [SerializeField] private int m_gold;
+    [SerializeField] private int m_gems;
     [SerializeField] private List<ItemInstance> m_itemInventory;
 
     public static void InitializeFromDefault()
@@ -62,7 +64,7 @@ public class Inventory : ScriptableObject
 
     public bool SlotEmpty(int index)
     {
-        if (m_itemInventory[index] == null || m_itemInventory[index].itemStats == null)
+        if (m_itemInventory[index] == null || m_itemInventory[index].ItemStats == null)
         {
             return true;
         }
@@ -108,6 +110,18 @@ public class Inventory : ScriptableObject
         m_itemInventory.Add(item);
 
         return m_itemInventory.Count - 1;
+    }
+
+    public void ModifyGold(int amount)
+    {
+        m_gold += amount;
+        Save();
+    }
+
+    public void ModifyGems(int amount)
+    {
+        m_gems += amount;
+        Save();
     }
 
     private void Save()

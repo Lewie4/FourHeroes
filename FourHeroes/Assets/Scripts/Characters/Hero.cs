@@ -12,6 +12,8 @@ public class HeroData
     public ItemInstance armour;
     public ItemInstance amulet;
     public ItemInstance relic;
+
+    public int groupSlot; // 0-3 for 4 slots, -1 for not in group
 }
 
 public class Hero : MonoBehaviour
@@ -100,10 +102,10 @@ public class Hero : MonoBehaviour
         //TODO: Check I have the right level for the item
         if (item != null)
         {
-            AddStat(item.stat1, item.itemStats.statMultiplier.statMultiplier1, item.ilvl);
-            AddStat(item.stat2, item.itemStats.statMultiplier.statMultiplier2, item.ilvl);
-            AddStat(item.stat3, item.itemStats.statMultiplier.statMultiplier3, item.ilvl);
-            AddStat(item.stat4, item.itemStats.statMultiplier.statMultiplier4, item.ilvl);
+            AddStat(item.stat1, item.ItemStats.statMultiplier.statMultiplier1, item.ilvl);
+            AddStat(item.stat2, item.ItemStats.statMultiplier.statMultiplier2, item.ilvl);
+            AddStat(item.stat3, item.ItemStats.statMultiplier.statMultiplier3, item.ilvl);
+            AddStat(item.stat4, item.ItemStats.statMultiplier.statMultiplier4, item.ilvl);
         }
     }
 

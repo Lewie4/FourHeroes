@@ -12,43 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d465cf23374ae6948b526ba0388b1fb4, type: 3}
   m_Name: RAmulet
   m_EditorClassIdentifier: 
+  itemName: 
   itemType: 2
   quality: 1
   statMultiplier: {fileID: 11400000, guid: dc4334685eefa6c48a6ef10e66d1a431, type: 2}
-  stat1:
-    health: 1
-    strength: 1
-    dexterity: 1
-    intelligence: 1
-    crit: 1
-    dodge: 1
-    block: 1
-    attackSpeed: 1
-  stat2:
-    health: 0
-    strength: 0
-    dexterity: 0
-    intelligence: 0
-    crit: 1
-    dodge: 1
-    block: 1
-    attackSpeed: 1
-  stat3:
-    health: 0
-    strength: 0
-    dexterity: 0
-    intelligence: 0
-    crit: 0
-    dodge: 0
-    block: 0
-    attackSpeed: 0
-  stat4:
-    health: 0
-    strength: 0
-    dexterity: 0
-    intelligence: 0
-    crit: 0
-    dodge: 0
-    block: 0
-    attackSpeed: 0
-  specialAbility: 0
+  statPossibilities: {fileID: 11400000, guid: fa5ae28e969e3d14084efe4ce5bfd43e, type: 2}
