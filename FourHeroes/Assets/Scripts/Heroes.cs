@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Player/Heroes", fileName = "HeroesTemplate.asset")]
+[CreateAssetMenu(menuName = "Player/Heroes", fileName = "BaseHeroes.asset")]
 [System.Serializable]
 public class Heroes : ScriptableObject
 {
@@ -39,7 +39,7 @@ public class Heroes : ScriptableObject
         {
             DestroyImmediate(m_instance);
         }
-        m_instance = Instantiate((Heroes)Resources.Load("HeroesTemplate"));
+        m_instance = Instantiate((Heroes)Resources.Load("BaseHeroes"));
         m_instance.hideFlags = HideFlags.HideAndDontSave;
     }
 

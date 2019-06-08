@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b71c5388e119e144b79fa48fc2aec69, type: 3}
-  m_Name: HeroesTemplate
+  m_Name: BaseHeroes
   m_EditorClassIdentifier: 
   m_heroes: []

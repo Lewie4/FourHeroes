@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Player/Inventory", fileName = "InventoryTemplate.asset")]
+[CreateAssetMenu(menuName = "Player/Inventory", fileName = "BaseInventory.asset")]
 [System.Serializable]
 public class Inventory : ScriptableObject
 {
@@ -39,7 +39,7 @@ public class Inventory : ScriptableObject
         {
             DestroyImmediate(m_instance);
         }
-        m_instance = Instantiate((Inventory)Resources.Load("InventoryTemplate"));
+        m_instance = Instantiate((Inventory)Resources.Load("BaseInventory"));
         m_instance.hideFlags = HideFlags.HideAndDontSave;
     }
 

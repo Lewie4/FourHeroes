@@ -6,6 +6,7 @@ using UnityEngine;
 public class HeroData
 {
     public int characterLevel;
+    public int characterExperience;
     public ClassData characterClass;
     public ItemInstance weapon;
     public ItemInstance armour;
