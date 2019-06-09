@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class ItemInstance
 {
+    public string itemName;
     public int ilvl;
     public Stat stat1;
     public Stat stat2;
@@ -12,7 +13,7 @@ public class ItemInstance
     public Stat stat4;
     public bool isNew;  //Show new in the inventory
 
-    [SerializeField] private BaseItem itemStats = null;
+    private BaseItem itemStats = null;
 
     public BaseItem ItemStats
     {
@@ -20,7 +21,7 @@ public class ItemInstance
         {
             if (itemStats == null)
             {
-                itemStats = ((ItemDatabase)Resources.Load("ItemDatabase")).GetActual(itemStats.itemName);
+                itemStats = ((ItemDatabase)Resources.Load("ItemDatabase")).GetActual(itemName);
             }
 
             return itemStats;

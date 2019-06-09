@@ -34,7 +34,6 @@ public enum Stat
 [System.Serializable]
 public class BaseItem : ScriptableObject
 {
-    public string itemName;
     public ItemType itemType;
     public ItemQuality quality;
     public ItemStatMultiplier statMultiplier;
