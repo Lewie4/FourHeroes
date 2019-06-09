@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d465cf23374ae6948b526ba0388b1fb4, type: 3}
-  m_Name: RAmulet
+  m_Script: {fileID: 11500000, guid: 26e46ae8ede84d447aa6ffde3682aba6, type: 3}
+  m_Name: LCloth
   m_EditorClassIdentifier: 
-  itemName: Common Amulet
-  itemType: 2
+  itemName: 
+  itemType: 1
   quality: 0
   statMultiplier: {fileID: 0}
   statPossibilities: {fileID: 0}
+  armourType: 0

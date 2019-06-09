@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d465cf23374ae6948b526ba0388b1fb4, type: 3}
-  m_Name: RAmulet
+  m_Name: EAmulet
   m_EditorClassIdentifier: 
   itemName: Common Amulet
   itemType: 2

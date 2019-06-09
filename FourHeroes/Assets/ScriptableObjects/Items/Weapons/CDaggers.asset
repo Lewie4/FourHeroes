@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a33617ff992c0418f75973c19cc923, type: 3}
+  m_Name: CDaggers
+  m_EditorClassIdentifier: 
+  itemName: Common Daggers
+  itemType: 0
+  quality: 0
+  statMultiplier: {fileID: 11400000, guid: d76e93b4f66bd7a4ca01779e961a95af, type: 2}
+  statPossibilities: {fileID: 11400000, guid: 0b9986cfa3056824a9fe1c9dcf60683e, type: 2}
+  weaponType: 1

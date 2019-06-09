@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cded6a2ebbf69d34ca25bdddbb0839f3, type: 3}
-  m_Name: RAmulet
+  m_Name: CAmulet
   m_EditorClassIdentifier: 
   statMultiplier1:
-    healthMult: 0.75
-    strengthMult: 0.75
-    dexterityMult: 0.75
-    intelligenceMult: 0.75
+    healthMult: 0.5
+    strengthMult: 0.5
+    dexterityMult: 0.5
+    intelligenceMult: 0.5
     critMult: 0
     dodgeMult: 0
     blockMult: 0
@@ -26,10 +26,10 @@ MonoBehaviour:
     strengthMult: 0
     dexterityMult: 0
     intelligenceMult: 0
-    critMult: 10
-    dodgeMult: 10
-    blockMult: 10
-    attackSpeedMult: 0.1
+    critMult: 0
+    dodgeMult: 0
+    blockMult: 0
+    attackSpeedMult: 0
   statMultiplier3:
     healthMult: 0
     strengthMult: 0
