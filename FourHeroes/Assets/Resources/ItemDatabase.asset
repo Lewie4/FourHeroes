@@ -14,6 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
     m_keys:
+    - Common Amulet
     - Rare Amulet
+    - Epic Amulet
+    - Legendary Amulet
+    - Common Cloth Armour
+    - Rare Cloth Armour
+    - Epic Cloth Armour
+    - Legendary Cloth Armour
+    - Common Daggers
+    - Rare Daggers
+    - Epic Daggers
+    - Legendary Daggers
     m_values:
-    - {fileID: 11400000, guid: 3345838438489064c9ce479a9dfa1d74, type: 2}
+    - {fileID: 11400000, guid: 1390ab432ca75b849be21f358760061d, type: 2}
+    - {fileID: 11400000, guid: f93edf0b6c18bb041940fdd0229697f0, type: 2}
+    - {fileID: 11400000, guid: 40e45695486c51145877777ebd553b87, type: 2}
+    - {fileID: 11400000, guid: 1b87620ba4e1dc249a9359d67f433b99, type: 2}
+    - {fileID: 11400000, guid: 959c04e48fc79914ca3887ab22010695, type: 2}
+    - {fileID: 11400000, guid: 97b28c2b678545145a332af92c01fe94, type: 2}
+    - {fileID: 11400000, guid: 2de3596669dbc4041ac6e5a390629fce, type: 2}
+    - {fileID: 11400000, guid: 68593ef557eea9941b3cdba65b1b4b1a, type: 2}
+    - {fileID: 11400000, guid: b286bdf42b71eda4f96007cb75424f09, type: 2}
+    - {fileID: 11400000, guid: c5b00b42f6431b04dbd70700e11cb9d4, type: 2}
+    - {fileID: 11400000, guid: 00cd8f45fe196d5468e3a34ebc3103f1, type: 2}
+    - {fileID: 11400000, guid: 8db90067eb26e7841b0f162db9aee1c6, type: 2}
