@@ -5,8 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class ItemInstance
 {
-    public string itemName;
-
     public int ilvl;
     public Stat stat1;
     public Stat stat2;
@@ -22,7 +20,7 @@ public class ItemInstance
         {
             if (itemStats == null)
             {
-                itemStats = ((ItemDatabase)Resources.Load("ItemDatabase")).GetActual(itemName);
+                itemStats = ((ItemDatabase)Resources.Load("ItemDatabase")).GetActual(itemStats.itemName);
             }
 
             return itemStats;

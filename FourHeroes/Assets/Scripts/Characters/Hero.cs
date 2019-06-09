@@ -249,5 +249,15 @@ public class Hero : MonoBehaviour
     {
         TakeDamage(m_currentStats.health);
     }
+
+    [ContextMenu("Save Gear To Inventory")]
+    public void SaveGearToInventory()
+    {
+        Inventory.Instance.InsertItem(m_heroData.amulet);
+        Inventory.Instance.InsertItem(m_heroData.armour);
+        Inventory.Instance.InsertItem(m_heroData.relic);
+        Inventory.Instance.InsertItem(m_heroData.weapon);
+    }
+
 #endif
 }

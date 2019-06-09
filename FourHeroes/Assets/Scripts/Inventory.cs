@@ -62,6 +62,11 @@ public class Inventory : ScriptableObject
         System.IO.File.WriteAllText(path, JsonUtility.ToJson(this, true));
     }
 
+    public int InventorySize()
+    {
+        return m_itemInventory == null ? -1 : m_itemInventory.Count;
+    }
+
     public bool SlotEmpty(int index)
     {
         if (m_itemInventory[index] == null || m_itemInventory[index].ItemStats == null)
