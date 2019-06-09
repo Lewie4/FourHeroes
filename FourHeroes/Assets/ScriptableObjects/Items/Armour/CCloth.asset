@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: 
   itemType: 1
   quality: 0
-  statMultiplier: {fileID: 0}
-  statPossibilities: {fileID: 0}
+  statMultiplier: {fileID: 11400000, guid: bbd34099f75232d44b7f09b399ea3841, type: 2}
+  statPossibilities: {fileID: 11400000, guid: 97d2e4899c7bd124496233a027bbb968, type: 2}
   armourType: 0

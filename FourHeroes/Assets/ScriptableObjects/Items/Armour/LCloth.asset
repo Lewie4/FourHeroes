@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 
   itemType: 1
-  quality: 0
-  statMultiplier: {fileID: 0}
-  statPossibilities: {fileID: 0}
+  quality: 3
+  statMultiplier: {fileID: 11400000, guid: 8438520de73136741ba22066ea83b4ba, type: 2}
+  statPossibilities: {fileID: 11400000, guid: 97d2e4899c7bd124496233a027bbb968, type: 2}
   armourType: 0

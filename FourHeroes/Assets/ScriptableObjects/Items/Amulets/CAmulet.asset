@@ -15,5 +15,5 @@ MonoBehaviour:
   itemName: Common Amulet
   itemType: 2
   quality: 0
-  statMultiplier: {fileID: 0}
-  statPossibilities: {fileID: 0}
+  statMultiplier: {fileID: 11400000, guid: 5df8e70ce703e174e93eac10dd7f7b38, type: 2}
+  statPossibilities: {fileID: 11400000, guid: 2b368883322eab1478763054788d5980, type: 2}

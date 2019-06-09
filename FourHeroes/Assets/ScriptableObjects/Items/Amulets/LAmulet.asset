@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Common Amulet
   itemType: 2
-  quality: 0
-  statMultiplier: {fileID: 0}
-  statPossibilities: {fileID: 0}
+  quality: 3
+  statMultiplier: {fileID: 11400000, guid: 3483504d183dfe942b178f3d2ee34a9a, type: 2}
+  statPossibilities: {fileID: 11400000, guid: 2b368883322eab1478763054788d5980, type: 2}

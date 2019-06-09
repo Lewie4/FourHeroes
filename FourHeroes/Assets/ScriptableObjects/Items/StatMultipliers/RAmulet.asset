@@ -17,18 +17,18 @@ MonoBehaviour:
     strengthMult: 0.75
     dexterityMult: 0.75
     intelligenceMult: 0.75
-    critMult: 0
-    dodgeMult: 0
-    blockMult: 0
-    attackSpeedMult: 0
+    critMult: 10
+    dodgeMult: 10
+    blockMult: 10
+    attackSpeedMult: 0.1
   statMultiplier2:
     healthMult: 0
     strengthMult: 0
     dexterityMult: 0
     intelligenceMult: 0
-    critMult: 10
-    dodgeMult: 10
-    blockMult: 10
+    critMult: 5
+    dodgeMult: 5
+    blockMult: 5
     attackSpeedMult: 0.1
   statMultiplier3:
     healthMult: 0

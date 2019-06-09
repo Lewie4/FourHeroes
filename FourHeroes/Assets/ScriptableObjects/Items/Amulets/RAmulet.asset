@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d465cf23374ae6948b526ba0388b1fb4, type: 3}
   m_Name: RAmulet
   m_EditorClassIdentifier: 
-  itemName: Common Amulet
+  itemName: Rare Amulet
   itemType: 2
-  quality: 0
-  statMultiplier: {fileID: 0}
-  statPossibilities: {fileID: 0}
+  quality: 1
+  statMultiplier: {fileID: 11400000, guid: fc22d861753158b4fa222a494ad61a28, type: 2}
+  statPossibilities: {fileID: 11400000, guid: 2b368883322eab1478763054788d5980, type: 2}
