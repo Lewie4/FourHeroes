@@ -13,4 +13,15 @@ public class PlayerGroup : Group
     {
         return true;
     }
+
+#if UNITY_EDITOR
+    [ContextMenu("Save Heros")]
+    public void SaveHeros()
+    {
+        Heroes.Instance.AddGroupHero(m_group[0].GetHeroData());
+        Heroes.Instance.AddGroupHero(m_group[1].GetHeroData());
+        Heroes.Instance.AddGroupHero(m_group[2].GetHeroData());
+        Heroes.Instance.AddGroupHero(m_group[3].GetHeroData());
+    }
+#endif
 }

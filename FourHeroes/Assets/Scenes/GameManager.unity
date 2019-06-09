@@ -120,6 +120,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &88888286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 88888287}
+  - component: {fileID: 88888288}
+  m_Layer: 0
+  m_Name: InventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &88888287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88888286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1314806736}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &88888288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88888286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913ba4950769b3546b1ed52ef48e5d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &185385824
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +320,194 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185385824}
   m_CullTransparentMesh: 0
+--- !u!1 &325889230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 325889231}
+  - component: {fileID: 325889232}
+  m_Layer: 0
+  m_Name: HeroManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &325889231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325889230}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1314806736}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &325889232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325889230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc849d36a028404b837e485a446815e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_heroes:
+  - characterLevel: 0
+    characterExperience: 0
+    className: 
+    weapon:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    armour:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    amulet:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    relic:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    groupSlot: 0
+  - characterLevel: 0
+    characterExperience: 0
+    className: 
+    weapon:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    armour:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    amulet:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    relic:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    groupSlot: 0
+  - characterLevel: 0
+    characterExperience: 0
+    className: 
+    weapon:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    armour:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    amulet:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    relic:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    groupSlot: 0
+  - characterLevel: 0
+    characterExperience: 0
+    className: 
+    weapon:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    armour:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    amulet:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    relic:
+      itemName: 
+      ilvl: 0
+      stat1: 0
+      stat2: 0
+      stat3: 0
+      stat4: 0
+      isNew: 0
+    groupSlot: 0
 --- !u!1 &621198023
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +865,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 325889231}
+  - {fileID: 88888287}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -804,7 +1037,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

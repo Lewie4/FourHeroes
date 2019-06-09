@@ -10,6 +10,13 @@ public class Heroes : ScriptableObject
     {
         get
         {
+#if UNITY_EDITOR
+            //Always load from json in editor
+            if (!m_instance)
+            {
+                SaveManager.LoadOrInitializeHeroes();
+            }
+#endif
             if (!m_instance)
             {
                 Heroes[] tmp = Resources.FindObjectsOfTypeAll<Heroes>();
@@ -31,7 +38,8 @@ public class Heroes : ScriptableObject
 
     private static Heroes m_instance;
 
-    [SerializeField] private List<HeroData> m_heroes;
+    [SerializeField] private HeroData[] m_groupHeroes = new HeroData[Group.GROUPSIZE];
+    [SerializeField] private List<HeroData> m_backupHeroes;
 
     public static void InitializeFromDefault()
     {
@@ -62,7 +70,7 @@ public class Heroes : ScriptableObject
 
     public bool SlotEmpty(int index)
     {
-        if (m_heroes[index] == null || m_heroes[index].CharacterStats == null || m_heroes[index].characterLevel <= 0)
+        if (m_backupHeroes[index] == null || m_backupHeroes[index].CharacterStats == null || m_backupHeroes[index].characterLevel <= 0)
         {
             return true;
         }
@@ -70,7 +78,46 @@ public class Heroes : ScriptableObject
         return false;
     }
 
-    public bool GetHero(int index, out HeroData hero)
+    public HeroData[] GetGroupHeroes()
+    {
+        return m_groupHeroes;
+    }
+
+    public bool GetGroupHero(int index, out HeroData hero)
+    {
+        if (index > 0 && index < m_groupHeroes.Length)
+        {
+            hero = m_groupHeroes[index];
+            return true;
+        }
+        else
+        {
+            hero = null;
+            return false;
+        }
+    }
+
+    public int AddGroupHero(HeroData hero, int index)
+    {
+        m_groupHeroes[index] = hero;
+        return index;
+    }
+
+    public int AddGroupHero(HeroData hero)
+    {
+        for (int i = 0; i < m_groupHeroes.Length; i++)
+        {
+            if (m_groupHeroes[i] == null || m_groupHeroes[i].CharacterStats == null || m_groupHeroes[i].characterLevel <= 0)
+            {
+                m_groupHeroes[i] = hero;
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    public bool GetBackupHero(int index, out HeroData hero)
     {
         if (SlotEmpty(index))
         {
@@ -78,36 +125,31 @@ public class Heroes : ScriptableObject
             return false;
         }
 
-        hero = m_heroes[index];
+        hero = m_backupHeroes[index];
         return true;
     }
 
-    public bool RemoveHero(int index)
+    public int AddBackupHero(HeroData hero)
     {
-        if (SlotEmpty(index))
-        {
-            return false;
-        }
-
-        m_heroes[index] = null;
-
-        return true;
-    }
-
-    public int AddHero(HeroData hero)
-    {
-        for (int i = 0; i < m_heroes.Count; i++)
+        for (int i = 0; i < m_backupHeroes.Count; i++)
         {
             if (SlotEmpty(i))
             {
-                m_heroes[i] = hero;
+                m_backupHeroes[i] = hero;
                 return i;
             }
         }
 
-        m_heroes.Add(hero);
+        m_backupHeroes.Add(hero);
 
-        return m_heroes.Count - 1;
+        return m_backupHeroes.Count - 1;
+    }
+
+    public void SwapHero(int groupIndex, int backupIndex)
+    {
+        HeroData temp = m_backupHeroes[backupIndex];
+        m_backupHeroes[backupIndex] = m_groupHeroes[groupIndex];
+        m_groupHeroes[groupIndex] = temp;
     }
 
     private void Save()

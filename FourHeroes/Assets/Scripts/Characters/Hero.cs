@@ -179,6 +179,11 @@ public class Hero : MonoBehaviour
         }
     }
 
+    public HeroData GetHeroData()
+    {
+        return m_heroData;
+    }
+
     public ClassData GetCharacterClassData()
     {
         return m_heroData.CharacterStats;
@@ -272,6 +277,5 @@ public class Hero : MonoBehaviour
         Inventory.Instance.InsertItem(m_heroData.relic);
         Inventory.Instance.InsertItem(m_heroData.weapon);
     }
-
 #endif
 }
