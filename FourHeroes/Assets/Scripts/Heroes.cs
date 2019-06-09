@@ -62,7 +62,7 @@ public class Heroes : ScriptableObject
 
     public bool SlotEmpty(int index)
     {
-        if (m_heroes[index] == null || m_heroes[index].characterClass == null || m_heroes[index].characterLevel <= 0)
+        if (m_heroes[index] == null || m_heroes[index].CharacterStats == null || m_heroes[index].characterLevel <= 0)
         {
             return true;
         }
