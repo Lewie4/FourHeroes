@@ -10,6 +10,13 @@ public class Inventory : ScriptableObject
     {
         get
         {
+#if UNITY_EDITOR
+            //Always load from json in editor
+            if (!m_instance)
+            {
+                SaveManager.LoadOrInitializeInventory();
+            }
+#endif
             if (!m_instance)
             {
                 Inventory[] tmp = Resources.FindObjectsOfTypeAll<Inventory>();

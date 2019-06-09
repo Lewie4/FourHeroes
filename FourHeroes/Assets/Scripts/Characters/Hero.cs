@@ -100,7 +100,7 @@ public class Hero : MonoBehaviour
     private void AddItemStats(ItemInstance item)
     {
         //TODO: Check I have the right level for the item
-        if (item != null)
+        if (item != null && item.ItemStats != null && !string.IsNullOrEmpty(item.itemName))
         {
             AddStat(item.stat1, item.ItemStats.statMultiplier.statMultiplier1, item.ilvl);
             AddStat(item.stat2, item.ItemStats.statMultiplier.statMultiplier2, item.ilvl);

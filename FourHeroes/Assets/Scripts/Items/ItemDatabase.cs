@@ -12,10 +12,13 @@ public class ItemDatabase : ScriptableObject
 
     public BaseItem GetActual(string key)
     {
-        BaseItem a;
-        if (Items.TryGetValue(key, out a))
+        if (!string.IsNullOrEmpty(key))
         {
-            return a;
+            BaseItem a;
+            if (Items.TryGetValue(key, out a))
+            {
+                return a;
+            }
         }
 
         Debug.Log("Couldn't find an Item matching key \"" + key + "\".");
