@@ -12,7 +12,7 @@ public class ItemInstance
     public Stat stat4;
     public bool isNew;  //Show new in the inventory
 
-    private BaseItem itemStats = null;
+    [SerializeField] private BaseItem itemStats = null;
 
     public BaseItem ItemStats
     {
