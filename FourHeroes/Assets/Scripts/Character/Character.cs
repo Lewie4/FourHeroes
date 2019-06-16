@@ -86,9 +86,15 @@ public class Character : MonoBehaviour
                     GetTarget();
                 }
 
-                //Check Range
-                //Move
-                TryAttack();
+                if (TargetInRange())
+                {
+                    m_target.TakeDamage(TryAttack());
+                }
+                else
+                {
+                    //Move
+                }
+                
             }
         }
     }
@@ -101,6 +107,21 @@ public class Character : MonoBehaviour
         }
     }
 
+    protected bool TargetInRange()
+    {
+        return GetTargetDistance() <= GetAttackRange();
+    }
+
+    protected float GetTargetDistance()
+    {
+        return Vector2.Distance(transform.position, m_target.transform.position);
+    }
+
+    protected float GetAttackRange()
+    {
+        return 1;
+    }
+
     public float TryAttack()
     {
         if (m_isAlive)
@@ -109,6 +130,8 @@ public class Character : MonoBehaviour
 
             if (CheckCanAttack())
             {
+                m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
+
                 float totalDamage = CalculateDamage(); //TODO: Crit damage
 
                 Debug.Log(gameObject.name + " did " + totalDamage + " damage to enemy" + m_target);

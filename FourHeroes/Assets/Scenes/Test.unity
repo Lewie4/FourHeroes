@@ -596,7 +596,7 @@ MonoBehaviour:
     crit: 0
     dodge: 0
     block: 0
-    attackSpeed: 0
+    attackSpeed: 100
   m_currentStats:
     health: 0
     strength: 0

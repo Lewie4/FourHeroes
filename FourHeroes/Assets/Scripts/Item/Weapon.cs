@@ -16,4 +16,5 @@ public class Weapon : BaseItem
 {
     [Header("Weapon Specific")]
     [SerializeField] WeaponType weaponType;
+    [SerializeField] float range;
 }

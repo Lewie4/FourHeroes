@@ -109,7 +109,6 @@ public class PlayerCharacter : Character
 
     protected override float CalculateDamage()
     {
-        m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
         float dexDamage = m_currentStats.dexterity * m_characterData.classData.multiplier.statMultiplier.dexterityMult;
         float intDamage = m_currentStats.intelligence * m_characterData.classData.multiplier.statMultiplier.intelligenceMult;
         float strDamage = m_currentStats.strength * m_characterData.classData.multiplier.statMultiplier.strengthMult;

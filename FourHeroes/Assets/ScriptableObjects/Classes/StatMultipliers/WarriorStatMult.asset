@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4669ea1d7181e4d82169fed1473c60, type: 3}
   m_Name: WarriorStatMult
   m_EditorClassIdentifier: 
-  healthMult: 1
-  strengthMult: 1
-  dexterityMult: 0.25
-  intelligenceMult: 0
+  statMultiplier:
+    healthMult: 1
+    strengthMult: 1
+    dexterityMult: 0.25
+    intelligenceMult: 0
+    critMult: 1
+    dodgeMult: 1
+    blockMult: 1
+    attackSpeedMult: 1

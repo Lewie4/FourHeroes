@@ -30,11 +30,6 @@ public class CombatController : MonoBehaviour
         m_instance = this;
     }
 
-    private void Start()
-    {
-        StartCombat();
-    }
-
     public Group GetMyGroup(bool isPlayer)
     {
         return isPlayer ? m_playerGroup : m_enemyGroup;
@@ -65,4 +60,12 @@ public class CombatController : MonoBehaviour
             character.StartCombat();
         }
     }
+
+#if UNITY_EDITOR
+    [ContextMenu("Start Combat")]
+    public void DebugStartCombat()
+    {
+        StartCombat();
+    }
+#endif
 }
