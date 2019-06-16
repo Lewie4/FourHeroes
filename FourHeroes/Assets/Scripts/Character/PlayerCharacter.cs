@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCharacter : Character
+public class PlayerCharacter : BaseCharacter
 {
     [System.Serializable]
     public class PlayerCharacterData

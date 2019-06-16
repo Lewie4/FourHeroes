@@ -42,18 +42,18 @@ public class CombatController : MonoBehaviour
 
     public void StartCombat()
     {
-        foreach(Character character in m_playerGroup.m_group)
+        foreach(BaseCharacter character in m_playerGroup.m_group)
         {
             StartCharacterCombat(character);
         }
 
-        foreach (Character character in m_enemyGroup.m_group)
+        foreach (BaseCharacter character in m_enemyGroup.m_group)
         {
             StartCharacterCombat(character);
         }
     }
 
-    private void StartCharacterCombat(Character character)
+    private void StartCharacterCombat(BaseCharacter character)
     {
         if (character != null)
         {

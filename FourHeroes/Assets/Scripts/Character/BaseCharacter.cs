@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class BaseCharacter : MonoBehaviour
 {
     [System.Serializable]
     public class Stats
@@ -41,7 +41,7 @@ public class Character : MonoBehaviour
 
     protected bool m_inCombat;
     protected bool m_isAlive;
-    protected Character m_target;
+    protected BaseCharacter m_target;
     protected float m_timeSinceLastAttack;
 
     private void Start()

@@ -6,7 +6,7 @@ public class Group : MonoBehaviour
 {
     public const int GROUPSIZE = 4;
 
-    public Character[] m_group = new Character[GROUPSIZE];
+    public BaseCharacter[] m_group = new BaseCharacter[GROUPSIZE];
 
     public void CombatStart()
     {

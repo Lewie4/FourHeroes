@@ -19,7 +19,7 @@ public class Targetting : ScriptableObject
     private Vector2 m_currentPos;
     private Group m_oppositeGroup;
 
-    public Character GetTarget(Vector2 pos, Group targetGroup)
+    public BaseCharacter GetTarget(Vector2 pos, Group targetGroup)
     {
         m_currentPos = pos;
         m_oppositeGroup = targetGroup;
@@ -33,12 +33,12 @@ public class Targetting : ScriptableObject
         }
     }
 
-    private Character GetClosest()
+    private BaseCharacter GetClosest()
     {
-        Character target = null;
+        BaseCharacter target = null;
         float closestDistance = float.MaxValue;
 
-        foreach (Character c in m_oppositeGroup.m_group)
+        foreach (BaseCharacter c in m_oppositeGroup.m_group)
         {
             if (c != null)
             {

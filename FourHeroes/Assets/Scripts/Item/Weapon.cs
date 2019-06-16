@@ -1,14 +1,7 @@
-﻿using System.Collections;
+﻿using HeroEditor.Common.Enums;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public enum WeaponType
-{
-    Sword,
-    Daggers,
-    Staff,
-    Bow,
-}
 
 [System.Serializable]
 [CreateAssetMenu(fileName = "CWeapon1", menuName = "Items/Weapon")]
