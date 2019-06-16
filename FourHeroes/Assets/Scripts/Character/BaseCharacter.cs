@@ -138,7 +138,7 @@ public class BaseCharacter : MonoBehaviour
         if(TargetInRange())
         {
             m_currentState = CurrentState.Attacking;
-            m_movementController.Move(Vector2.zero);
+            m_movementController.Move(Vector3.zero);
         }
     }
 
@@ -174,7 +174,7 @@ public class BaseCharacter : MonoBehaviour
 
     protected float GetTargetDistance()
     {
-        return Vector2.Distance(transform.position, m_target.transform.position);
+        return Vector3.Distance(transform.position, m_target.transform.position);
     }
 
     protected float GetAttackRange()

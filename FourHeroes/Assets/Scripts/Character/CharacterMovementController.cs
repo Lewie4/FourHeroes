@@ -18,7 +18,7 @@ public class CharacterMovementController : MonoBehaviour
         _controller = GetComponent<CharacterController>();
     }
 
-    public void Move(Vector2 direction)
+    public void Move(Vector3 direction)
     {
         if (_controller.isGrounded)
         {
@@ -27,6 +27,11 @@ public class CharacterMovementController : MonoBehaviour
             if (direction.x != 0)
             {
                 _speed.x += direction.x > 0 ? 5 : -5;
+            }
+
+            if(direction.z != 0)
+            {
+                _speed.z += direction.z > 0 ? 5 : -5;
             }
 
             if (_speed.magnitude > 0)
