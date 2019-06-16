@@ -33,15 +33,24 @@ public class BaseCharacter : MonoBehaviour
         }
     }
 
+    public enum CurrentState
+    {
+        None,
+        Ready,
+        Moving,
+        Attacking,
+        Dead
+    }
+
     [SerializeField] protected bool m_playerControlled;
     [SerializeField] protected Targetting m_targetting;
+    [SerializeField] protected CharacterMovementController m_movementController;
     [SerializeField] protected CharacterWeaponController m_weaponControls;
 
     [SerializeField] protected Stats m_totalStats;    //Max current stats 
     [SerializeField] protected Stats m_currentStats;     //Stats to be used in combat
 
-    protected bool m_inCombat;
-    protected bool m_isAlive;
+    protected CurrentState m_currentState;
     protected BaseCharacter m_target;
     protected float m_timeSinceLastAttack;
 
@@ -68,55 +77,86 @@ public class BaseCharacter : MonoBehaviour
 
     public void StartCombat()
     {
-        m_inCombat = true;
+        m_currentState = CurrentState.Ready;
 
-        if (m_currentStats.health > 0)
-        {
-            m_isAlive = true;
-        }
     }
 
     private void Update()
     {
-        if(m_isAlive)
+        if (m_currentState != CurrentState.None)
         {
-            if(m_inCombat)
+            if (m_target == null)
             {
-                if(m_target == null)
-                {
-                    GetTarget();
-                }
+                m_currentState = CurrentState.Ready;
+            }
 
-                CharacterFlip();
-
-                if (TargetInRange())
-                {
-                    m_timeSinceLastAttack += Time.deltaTime;
-
-                    if (CheckCanAttack())
+            switch (m_currentState)
+            {
+                case CurrentState.Moving:
                     {
-                        m_weaponControls.Attack();
-                        m_target.TakeDamage(TryAttack());
+                        Move();
+                        break;
                     }
-                }
-                else
-                {
-                    //Move
-                }
-                
+                case CurrentState.Attacking:
+                    {
+                        Attack();
+                        break;
+                    }
+                default:
+                    {
+                        Ready();
+                        break;
+                    }
             }
         }
     }
 
-    private void CharacterFlip()
+    protected void Ready()
     {
-        var scale = transform.localScale;
+        if (m_target == null)
+        {
+            GetTarget();
+        }
 
-        scale.x = Mathf.Abs(scale.x);
+        if (TargetInRange())
+        {
+            m_currentState = CurrentState.Attacking;
+        }
+        else
+        {
+            m_currentState = CurrentState.Moving;
+        }
+    }
 
-        if (m_target.transform.position.x < transform.position.x) scale.x *= -1;
+    protected void Move()
+    {
+        if (m_movementController != null)
+        {
+            m_movementController.Move(m_target.transform.position - transform.position);
+        }
 
-        transform.localScale = scale;
+        if(TargetInRange())
+        {
+            m_currentState = CurrentState.Attacking;
+            m_movementController.Move(Vector2.zero);
+        }
+    }
+
+    protected void Attack()
+    {
+        if (!TargetInRange())
+        {
+            m_currentState = CurrentState.Moving;
+            return;
+        }
+
+        m_timeSinceLastAttack += Time.deltaTime;
+
+        if (CheckCanAttack())
+        {
+            m_weaponControls.Attack();
+            m_target.TakeDamage(TryAttack());
+        }
     }
 
     protected void GetTarget()
@@ -139,7 +179,7 @@ public class BaseCharacter : MonoBehaviour
 
     protected float GetAttackRange()
     {
-        return 2.5f;
+        return 2f;
     }
 
     public float TryAttack()
@@ -180,7 +220,7 @@ public class BaseCharacter : MonoBehaviour
 
     private void Die()
     {
-        m_isAlive = false;
+        m_currentState = CurrentState.Dead;
 
         Debug.Log("<color=red>" + gameObject.name + " has died!</color>");
     }

@@ -32,6 +32,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_playerControlled: 1
   m_targetting: {fileID: 11400000, guid: 3732dfb08f3890f428dca69fc1971f16, type: 2}
+  m_movementController: {fileID: 1134861643920827763}
   m_weaponControls: {fileID: 2413106653591777450}
   m_totalStats:
     health: 0
@@ -92,6 +93,18 @@ MonoBehaviour:
       stat4: 0
       isNew: 0
     classData: {fileID: 11400000, guid: cea2f524cc1f0df4e85ed421602f8043, type: 2}
+--- !u!114 &1134861643920827763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493338012712069003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1ea38d97f149974796bc4a02e5d1399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2413106653591777450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,21 +121,6 @@ MonoBehaviour:
   ArmL: {fileID: 1489502348445884493}
   ArmR: {fileID: 1489295245459666871}
   FixHorizontal: 0
---- !u!114 &3217592184174330855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493338012712069003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b03fdc7d43a421887bd2f66b8e68701, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LeftButton: 276
-  RightButton: 275
-  JumpButton: 32
 --- !u!1001 &1493671722066241269
 PrefabInstance:
   m_ObjectHideFlags: 0
