@@ -35,6 +35,7 @@ public class BaseCharacter : MonoBehaviour
 
     [SerializeField] protected bool m_playerControlled;
     [SerializeField] protected Targetting m_targetting;
+    [SerializeField] protected CharacterWeaponController m_weaponControls;
 
     [SerializeField] protected Stats m_totalStats;    //Max current stats 
     [SerializeField] protected Stats m_currentStats;     //Stats to be used in combat
@@ -86,9 +87,17 @@ public class BaseCharacter : MonoBehaviour
                     GetTarget();
                 }
 
+                CharacterFlip();
+
                 if (TargetInRange())
                 {
-                    m_target.TakeDamage(TryAttack());
+                    m_timeSinceLastAttack += Time.deltaTime;
+
+                    if (CheckCanAttack())
+                    {
+                        m_weaponControls.Attack();
+                        m_target.TakeDamage(TryAttack());
+                    }
                 }
                 else
                 {
@@ -97,6 +106,17 @@ public class BaseCharacter : MonoBehaviour
                 
             }
         }
+    }
+
+    private void CharacterFlip()
+    {
+        var scale = transform.localScale;
+
+        scale.x = Mathf.Abs(scale.x);
+
+        if (m_target.transform.position.x < transform.position.x) scale.x *= -1;
+
+        transform.localScale = scale;
     }
 
     protected void GetTarget()
@@ -119,27 +139,18 @@ public class BaseCharacter : MonoBehaviour
 
     protected float GetAttackRange()
     {
-        return 1;
+        return 2.5f;
     }
 
     public float TryAttack()
     {
-        if (m_isAlive)
-        {
-            m_timeSinceLastAttack += Time.deltaTime;
+        m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
 
-            if (CheckCanAttack())
-            {
-                m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
+        float totalDamage = CalculateDamage(); //TODO: Crit damage
 
-                float totalDamage = CalculateDamage(); //TODO: Crit damage
+        Debug.Log(gameObject.name + " did " + totalDamage + " damage to enemy" + m_target);
 
-                Debug.Log(gameObject.name + " did " + totalDamage + " damage to enemy" + m_target);
-
-                return totalDamage;
-            }
-        }
-        return 0;
+        return totalDamage;
     }
 
     private bool CheckCanAttack()

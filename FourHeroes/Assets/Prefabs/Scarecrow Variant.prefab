@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1538979698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7767496904009255052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62584a16549088f4a92ae5c483b934b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_playerControlled: 0
+  m_targetting: {fileID: 11400000, guid: 3732dfb08f3890f428dca69fc1971f16, type: 2}
+  m_totalStats:
+    health: 1000
+    strength: 0
+    dexterity: 0
+    intelligence: 0
+    crit: 0
+    dodge: 0
+    block: 0
+    attackSpeed: 100
+  m_currentStats:
+    health: 0
+    strength: 0
+    dexterity: 0
+    intelligence: 0
+    crit: 0
+    dodge: 0
+    block: 0
+    attackSpeed: 0
+--- !u!1001 &7766524381420912090
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1000010446271830, guid: 87ee797c72794cb79ddbc7e895612561, type: 3}
+      propertyPath: m_Name
+      value: Scarecrow Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012454214018, guid: 87ee797c72794cb79ddbc7e895612561, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012454214018, guid: 87ee797c72794cb79ddbc7e895612561, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012454214018, guid: 87ee797c72794cb79ddbc7e895612561, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012454214018, guid: 87ee797c72794cb79ddbc7e895612561, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012454214018, guid: 87ee797c72794cb79ddbc7e895612561, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012454214018, guid: 87ee797c72794cb79ddbc7e895612561, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012454214018, guid: 87ee797c72794cb79ddbc7e895612561, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012454214018, guid: 87ee797c72794cb79ddbc7e895612561, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87ee797c72794cb79ddbc7e895612561, type: 3}
+--- !u!1 &7767496904009255052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010446271830, guid: 87ee797c72794cb79ddbc7e895612561,
+    type: 3}
+  m_PrefabInstance: {fileID: 7766524381420912090}
+  m_PrefabAsset: {fileID: 0}
