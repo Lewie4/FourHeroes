@@ -14,13 +14,13 @@ public class CharacterWeaponController : MonoBehaviour
     public Transform ArmR;
     public bool FixHorizontal;
 
-    private bool _locked;
+    private bool m_locked;
 
     public void Attack()
     {
-        _locked = !Character.Animator.GetBool("Ready") || Character.Animator.GetInteger("Dead") > 0;
+        m_locked = !Character.Animator.GetBool("Ready") || Character.Animator.GetInteger("Dead") > 0;
 
-        if (_locked) return;
+        if (m_locked) return;
 
         switch (Character.WeaponType)
         {
@@ -56,7 +56,7 @@ public class CharacterWeaponController : MonoBehaviour
     /// </summary>
     public void LateUpdate()
     {
-        if (_locked) return;
+        if (m_locked) return;
 
         Transform arm;
         Transform weapon;

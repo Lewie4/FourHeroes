@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.HeroEditor.Common.CharacterScripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,6 +47,7 @@ public class BaseCharacter : MonoBehaviour
     [SerializeField] protected Targetting m_targetting;
     [SerializeField] protected CharacterMovementController m_movementController;
     [SerializeField] protected CharacterWeaponController m_weaponControls;
+    [SerializeField] protected CharacterAnimationController m_animationController;
 
     [SerializeField] protected Stats m_totalStats;    //Max current stats 
     [SerializeField] protected Stats m_currentStats;     //Stats to be used in combat
@@ -58,6 +60,8 @@ public class BaseCharacter : MonoBehaviour
     {
         SetupStats();
         SetupCurrentStats();
+
+        m_animationController.OnCustomEvent += Attack;
     }
 
     protected void ClearStats()
@@ -78,15 +82,16 @@ public class BaseCharacter : MonoBehaviour
     public void StartCombat()
     {
         m_currentState = CurrentState.Ready;
-
+        Ready();
     }
 
     private void Update()
     {
-        if (m_currentState != CurrentState.None)
+        if (m_currentState != CurrentState.None && m_currentState != CurrentState.Dead)
         {
-            if (m_target == null)
+            if (m_target.GetCurrentState() == CurrentState.Dead)
             {
+                m_target = null;
                 m_currentState = CurrentState.Ready;
             }
 
@@ -99,7 +104,7 @@ public class BaseCharacter : MonoBehaviour
                     }
                 case CurrentState.Attacking:
                     {
-                        Attack();
+                        TryAttack();
                         break;
                     }
                 default:
@@ -138,11 +143,14 @@ public class BaseCharacter : MonoBehaviour
         if(TargetInRange())
         {
             m_currentState = CurrentState.Attacking;
-            m_movementController.Move(Vector3.zero);
+            if (m_movementController != null)
+            {
+                m_movementController.StopMove();
+            }
         }
     }
 
-    protected void Attack()
+    protected void TryAttack()
     {
         if (!TargetInRange())
         {
@@ -154,8 +162,20 @@ public class BaseCharacter : MonoBehaviour
 
         if (CheckCanAttack())
         {
-            m_weaponControls.Attack();
-            m_target.TakeDamage(TryAttack());
+            m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
+            m_weaponControls.Attack();            
+        }
+    }
+
+    protected void Attack(string eventName)
+    {
+        if (eventName == "Hit")
+        {            
+            float totalDamage = CalculateDamage(); //TODO: Crit damage
+
+            Debug.Log(gameObject.name + " did " + totalDamage + " damage to enemy" + m_target);
+
+            m_target.TakeDamage(totalDamage);
         }
     }
 
@@ -182,17 +202,6 @@ public class BaseCharacter : MonoBehaviour
         return 2f;
     }
 
-    public float TryAttack()
-    {
-        m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
-
-        float totalDamage = CalculateDamage(); //TODO: Crit damage
-
-        Debug.Log(gameObject.name + " did " + totalDamage + " damage to enemy" + m_target);
-
-        return totalDamage;
-    }
-
     private bool CheckCanAttack()
     {
         if (m_timeSinceLastAttack > m_currentStats.attackSpeed)
@@ -210,6 +219,7 @@ public class BaseCharacter : MonoBehaviour
     public void TakeDamage(float damage)
     {
         m_currentStats.health -= damage;
+        m_animationController.TakeDamage();
 
         if (m_currentStats.health <= 0)
         {
@@ -221,10 +231,15 @@ public class BaseCharacter : MonoBehaviour
     private void Die()
     {
         m_currentState = CurrentState.Dead;
+        m_animationController.Die();
 
         Debug.Log("<color=red>" + gameObject.name + " has died!</color>");
     }
 
+    public CurrentState GetCurrentState()
+    {
+        return m_currentState;
+    }
 
 #if UNITY_EDITOR
     [ContextMenu("Kill Hero")]

@@ -40,7 +40,7 @@ public class Targetting : ScriptableObject
 
         foreach (BaseCharacter c in m_oppositeGroup.m_group)
         {
-            if (c != null)
+            if (c != null && c.GetCurrentState() != BaseCharacter.CurrentState.Dead)
             {
                 float distance = Vector2.Distance(m_currentPos, c.transform.position);
 

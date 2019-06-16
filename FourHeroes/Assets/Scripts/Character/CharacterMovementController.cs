@@ -7,44 +7,36 @@ using Assets.HeroEditor.Common.CharacterScripts;
 
 public class CharacterMovementController : MonoBehaviour
 {
-    private Vector3 _speed = Vector3.zero;
-    private Character _character;
-    private CharacterController _controller; // https://docs.unity3d.com/ScriptReference/CharacterController.html
+    private Character m_character;
 
     public void Start()
     {
-        _character = GetComponent<Character>();
-        _character.Animator.SetBool("Ready", true);
-        _controller = GetComponent<CharacterController>();
+        m_character = GetComponent<Character>();
+        m_character.Animator.SetBool("Ready", true);
     }
 
     public void Move(Vector3 direction)
-    {
-        if (_controller.isGrounded)
+    {  
+        Vector3 newDirection = direction.normalized * 5;
+
+        if (newDirection.magnitude > 0)
         {
-            _speed = Vector3.zero;
-
-            if (direction.x != 0)
-            {
-                _speed.x += direction.x > 0 ? 5 : -5;
-            }
-
-            if(direction.z != 0)
-            {
-                _speed.z += direction.z > 0 ? 5 : -5;
-            }
-
-            if (_speed.magnitude > 0)
-            {
-                Turn(_speed.x);
-            }
+            Turn(newDirection.x);
         }
 
-        _character.Animator.SetBool("Run", _controller.isGrounded && Math.Abs(_speed.x) > 0.01f); // Go to animator transitions for more details
-        _character.Animator.SetBool("Jump", !_controller.isGrounded);
+        m_character.Animator.SetBool("Run", Math.Abs(newDirection.x) > 0.01f); //m_controller.isGrounded && Math.Abs(newDirection.x) > 0.01f); // Go to animator transitions for more details
+        //m_character.Animator.SetBool("Jump", !m_controller.isGrounded);
 
-        _speed.y -= 25 * Time.deltaTime; // Depends on project physics settings
-        _controller.Move(_speed * Time.deltaTime);
+        //if (!m_controller.isGrounded)
+        //{
+            //newDirection.y -= 25 * Time.deltaTime; // Depends on project physics settings
+        //}
+        transform.Translate(newDirection * Time.deltaTime);
+    }
+
+    public void StopMove()
+    {
+        m_character.Animator.SetBool("Run", false) ;
     }
 
     public void Turn(float direction)

@@ -1,23 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!143 &6147566353121481850
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493338012712069003}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2.5
-  m_Radius: 0.75
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.125, z: 0}
 --- !u!114 &2031900052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,6 +16,7 @@ MonoBehaviour:
   m_targetting: {fileID: 11400000, guid: 3732dfb08f3890f428dca69fc1971f16, type: 2}
   m_movementController: {fileID: 1134861643920827763}
   m_weaponControls: {fileID: 2413106653591777450}
+  m_animationController: {fileID: 7404894396978959475}
   m_totalStats:
     health: 0
     strength: 0
@@ -121,6 +104,20 @@ MonoBehaviour:
   ArmL: {fileID: 1489502348445884493}
   ArmR: {fileID: 1489295245459666871}
   FixHorizontal: 0
+--- !u!114 &7404894396978959475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494254515635994013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe4168de50941c44951341e5d2cdcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_character: {fileID: 1526097651302369491}
+  m_animator: {fileID: 1578827955562138557}
 --- !u!1001 &1493671722066241269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,6 +161,30 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114665035860700710, guid: b596841f14f84a24ad00f5c94818ab7c,
+        type: 3}
+      propertyPath: MeleeWeapon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114425811433215522, guid: b596841f14f84a24ad00f5c94818ab7c,
+        type: 3}
+      propertyPath: AnimationEvents
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114425811433215522, guid: b596841f14f84a24ad00f5c94818ab7c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114360637457846146, guid: b596841f14f84a24ad00f5c94818ab7c,
+        type: 3}
+      propertyPath: AnimationEvents
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527491517224626, guid: b596841f14f84a24ad00f5c94818ab7c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 199816370721622782, guid: b596841f14f84a24ad00f5c94818ab7c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -187,6 +208,8 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 114130259376288338, guid: b596841f14f84a24ad00f5c94818ab7c, type: 3}
     - {fileID: 114839934857481662, guid: b596841f14f84a24ad00f5c94818ab7c, type: 3}
+    - {fileID: 114289189664409796, guid: b596841f14f84a24ad00f5c94818ab7c, type: 3}
+    - {fileID: 114425811433215522, guid: b596841f14f84a24ad00f5c94818ab7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b596841f14f84a24ad00f5c94818ab7c, type: 3}
 --- !u!1 &1493338012712069003 stripped
 GameObject:
@@ -206,6 +229,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa07006f64294964b84f79497751e149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1494254515635994013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1757109176523624, guid: b596841f14f84a24ad00f5c94818ab7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1493671722066241269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1578827955562138557 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95570845223693640, guid: b596841f14f84a24ad00f5c94818ab7c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1493671722066241269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1489502348445884493 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4874113436337848, guid: b596841f14f84a24ad00f5c94818ab7c,
