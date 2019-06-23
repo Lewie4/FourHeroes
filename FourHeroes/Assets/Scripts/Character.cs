@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Assets.HeroEditor.Common.Data;
-using Assets.HeroEditor.Common.Enums;
 using UnityEngine;
 
 /// <summary>

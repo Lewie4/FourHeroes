@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using HeroEditor.Common.Enums;
-using Assets.HeroEditor.Common.CharacterScripts;
 
-
-//Based on Assets/HeroEditor/Common/CharacterScripts/WeaponControls.cs
 public class CharacterWeaponController : MonoBehaviour
 {
     public Character Character;

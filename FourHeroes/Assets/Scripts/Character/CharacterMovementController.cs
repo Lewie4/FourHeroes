@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using Assets.HeroEditor.Common.CharacterScripts;
-
 
 public class CharacterMovementController : MonoBehaviour
 {

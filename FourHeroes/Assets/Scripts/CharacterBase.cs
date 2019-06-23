@@ -5,8 +5,6 @@ public abstract class CharacterBase : MonoBehaviour
 {
     public abstract void Initialize();
     public abstract void UpdateAnimation();
-    public abstract string ToJson();
-    public abstract void LoadFromJson(string serialized);
 
     public void CopyFrom(CharacterBase character)
     {
