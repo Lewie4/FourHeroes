@@ -45,14 +45,6 @@ namespace Assets.HeroEditor.Common.ExampleScripts
 			Character.EquipBow(sprites);
 		}
 
-		public void EquipFirearm1H(string sname, string collection)
-		{
-			var sprites = SpriteCollection.Instance.Firearms1H.Single(i => i.Name == sname && i.Collection == collection).Sprites;
-			var firearmParams = FirearmCollection.Instance.Firearms.Single(i => i.Name == sname);
-
-			Character.EquipFirearm(sprites, firearmParams);
-		}
-
 		public void EquipShield(string sname, string collection)
 		{
 			var sprite = SpriteCollection.Instance.Shield.Single(i => i.Name == sname && i.Collection == collection).Sprite;

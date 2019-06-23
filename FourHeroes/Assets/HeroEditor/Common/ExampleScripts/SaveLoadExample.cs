@@ -47,10 +47,6 @@ namespace Assets.HeroEditor.Common.ExampleScripts
 				case WeaponType.Bow:
 					characterData.Weapons = new List<string> { character.Bow[0].texture.name };
 					break;
-				case WeaponType.Firearms1H:
-				case WeaponType.Firearms2H:
-					characterData.Weapons = new List<string> { character.Firearms[0].texture.name };
-					break;
 				default: throw new NotImplementedException();
 			}
 
@@ -90,12 +86,6 @@ namespace Assets.HeroEditor.Common.ExampleScripts
 					break;
 				case WeaponType.Bow:
 					character.Bow = spriteCollection.Bow.Single(i => i.Name == characterData.Weapons[0]).Sprites;
-					break;
-				case WeaponType.Firearms1H:
-					character.Bow = spriteCollection.Firearms1H.Single(i => i.Name == characterData.Weapons[0]).Sprites;
-					break;
-				case WeaponType.Firearms2H:
-					character.Bow = spriteCollection.Firearms2H.Single(i => i.Name == characterData.Weapons[0]).Sprites;
 					break;
 				default: throw new NotImplementedException();
 			}

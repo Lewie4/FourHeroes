@@ -38,13 +38,6 @@ namespace Assets.HeroEditor.Common.CharacterScripts
                     Character.BowShooting.ChargeButtonDown = Input.GetKeyDown(FireButton);
                     Character.BowShooting.ChargeButtonUp = Input.GetKeyUp(FireButton);
                     break;
-                case WeaponType.Firearms1H:
-                case WeaponType.Firearms2H:
-                    Character.Firearm.Fire.FireButtonDown = Input.GetKeyDown(FireButton);
-                    Character.Firearm.Fire.FireButtonPressed = Input.GetKey(FireButton);
-                    Character.Firearm.Fire.FireButtonUp = Input.GetKeyUp(FireButton);
-                    Character.Firearm.Reload.ReloadButtonDown = Input.GetKeyDown(ReloadButton);
-                    break;
 	            case WeaponType.Supplies:
 		            if (Input.GetKeyDown(FireButton))
 		            {
@@ -69,11 +62,6 @@ namespace Assets.HeroEditor.Common.CharacterScripts
                 case WeaponType.Bow:
                     arm = ArmL;
                     weapon = Character.BowRenderers[3].transform;
-                    break;
-                case WeaponType.Firearms1H:
-                case WeaponType.Firearms2H:
-                    arm = ArmR;
-                    weapon = Character.Firearm.FireTransform;
                     break;
                 default:
                     return;
