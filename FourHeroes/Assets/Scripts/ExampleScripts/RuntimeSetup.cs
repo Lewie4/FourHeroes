@@ -36,7 +36,7 @@ public class RuntimeSetup : MonoBehaviour
     {
         var entry = SpriteCollection.Instance.MeleeWeapon2H.Single(i => i.cosmeticName == sname);
 
-        Character.EquipMeleeWeapon(entry.sprites[0], entry.sprites[0], true);
+        Character.EquipMeleeWeapon(entry.sprites[0], entry.sprites[1], true);
     }
 
     public void EquipBow(string sname)
@@ -55,15 +55,8 @@ public class RuntimeSetup : MonoBehaviour
 
     public void EquipArmor(string sname)
     {
-        var entry = SpriteCollection.Instance.Armor.Single(i => i.cosmeticName == sname);
+        var entry = (ArmourSet)SpriteCollection.Instance.Armor.Single(i => i.cosmeticName == sname);
 
-        Character.EquipArmor(entry.sprites);
-    }
-
-    public void EquipHelmet(string sname)
-    {
-        var entry = SpriteCollection.Instance.Helmet.Single(i => i.cosmeticName == sname);
-
-        Character.EquipHelmet(entry.sprites[0]);
+        Character.EquipArmor(entry.sprites, entry.helmet, entry.cape);
     }
 }

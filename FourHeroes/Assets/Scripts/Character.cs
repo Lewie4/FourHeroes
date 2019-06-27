@@ -179,22 +179,14 @@ public partial class Character : CharacterBase
     }
 
     /// <summary>
-    /// Equip helmet.
-    /// </summary>
-    /// <param name="sprite">Helmet sprite. It can be obtained from SpriteCollection.Instance.Helmet[].Sprite.</param>
-    public void EquipHelmet(Sprite sprite)
-    {
-        Helmet = sprite;
-        Initialize();
-    }
-
-    /// <summary>
     /// Equip armor.
     /// </summary>
     /// <param name="sprites">A list of sprites from armor atlas (multiple sprite). It can be obtained from SpriteCollection.Instance.Armor[].Sprites.</param>
-    public void EquipArmor(List<Sprite> sprites)
+    public void EquipArmor(List<Sprite> sprites, Sprite helmet, Sprite cape)
     {
         Armor = sprites;
+        Helmet = helmet;
+        Cape = cape;
         Initialize();
     }
 

@@ -14,30 +14,28 @@ public class SpriteCollection : MonoBehaviour
     }
 
     [Header("Body Parts")]
-    public List<Cosmetic> Head;
-    public List<Cosmetic> Ears;
-    public List<Cosmetic> Hair;
-    public List<Cosmetic> Eyebrows;
-    public List<Cosmetic> Eyes;
-    public List<Cosmetic> Mouth;
-    public List<Cosmetic> Beard;
-    public List<Cosmetic> Body;
+    public List<CosmeticSet> Head;
+    public List<CosmeticSet> Ears;
+    public List<CosmeticSet> Hair;
+    public List<CosmeticSet> Eyebrows;
+    public List<CosmeticSet> Eyes;
+    public List<CosmeticSet> Mouth;
+    public List<CosmeticSet> Beard;
+    public List<CosmeticSet> Body;
 
     [Header("Equipment")]
-    public List<Cosmetic> Helmet;
-    public List<Cosmetic> Glasses;
-    public List<Cosmetic> Mask;
-    public List<Cosmetic> Earrings;
-    public List<Cosmetic> Armor;
-    public List<Cosmetic> Cape;
-    public List<Cosmetic> Back;
-    public List<Cosmetic> MeleeWeapon1H;
-    public List<Cosmetic> MeleeWeapon2H;
-    public List<Cosmetic> MeleeWeaponTrail1H;
-    public List<Cosmetic> MeleeWeaponTrail2H;
-    public List<Cosmetic> Bow;
-    public List<Cosmetic> Shield;
-    public List<Cosmetic> Supplies;
+    //public List<CosmeticSet> Glasses;
+    //public List<CosmeticSet> Mask;
+    //public List<CosmeticSet> Earrings;
+    public List<ArmourSet> Armor;
+    public List<CosmeticSet> Back;
+    public List<CosmeticSet> MeleeWeapon1H;
+    public List<CosmeticSet> MeleeWeapon2H;
+    public List<CosmeticSet> MeleeWeaponTrail1H;
+    public List<CosmeticSet> MeleeWeaponTrail2H;
+    public List<CosmeticSet> Bow;
+    public List<CosmeticSet> Shield;
+    public List<CosmeticSet> Supplies;
 
     [Header("Service")]
     public bool UseTrailSprites = true;

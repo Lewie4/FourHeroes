@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-[CreateAssetMenu(fileName = "Cosmetic", menuName = "Cosmetic")]
-public class Cosmetic : ScriptableObject
+[CreateAssetMenu(fileName = "CosmeticSet", menuName = "Cosmetics/Cosmetic Set")]
+public class CosmeticSet : ScriptableObject
 {
     public string cosmeticName;
 
