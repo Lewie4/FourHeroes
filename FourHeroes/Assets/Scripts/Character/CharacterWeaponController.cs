@@ -41,6 +41,22 @@ public class CharacterWeaponController : MonoBehaviour
         }
     }
 
+    public void ReadyWeapon()
+    {
+        m_locked = !Character.Animator.GetBool("Ready") || Character.Animator.GetInteger("Dead") > 0;
+
+        if (m_locked) return;
+
+        switch (Character.WeaponType)
+        {
+            case WeaponType.Bow:
+                {
+                    Character.BowShooting.Charge();
+                }
+                break;
+        }
+    }
+
     /// <summary>
     /// Called each frame update, weapon to mouse rotation example.
     /// </summary>

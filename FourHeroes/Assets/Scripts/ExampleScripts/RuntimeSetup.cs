@@ -12,6 +12,7 @@ public class RuntimeSetup : MonoBehaviour
     {
         EquipArmor("Slave");
         EquipBow("GoldDragon");
+        Character.UpdateAnimation();
     }
 
     /// <summary>

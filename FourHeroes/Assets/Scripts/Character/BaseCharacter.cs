@@ -124,7 +124,7 @@ public class BaseCharacter : MonoBehaviour
 
         if (TargetInRange())
         {
-            m_currentState = CurrentState.Attacking;
+            m_currentState = CurrentState.Attacking;            
         }
         else
         {
@@ -163,6 +163,10 @@ public class BaseCharacter : MonoBehaviour
         {
             m_timeSinceLastAttack -= m_currentStats.attackSpeed; //Keep any leftover time to not punish bad devices
             m_weaponControls.Attack();            
+        }
+        else
+        {
+            m_weaponControls.ReadyWeapon();
         }
     }
 

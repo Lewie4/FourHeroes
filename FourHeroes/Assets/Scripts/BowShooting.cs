@@ -42,7 +42,7 @@ public class BowShooting : MonoBehaviour
             }
         }*/
 
-        if(!_charging)
+        /*if(!_charging)
         {
             _chargeTime = Time.time;
             Character.Animator.SetInteger("Charge", 1);
@@ -56,7 +56,7 @@ public class BowShooting : MonoBehaviour
                 Character.Animator.SetInteger("Charge", charged ? 2 : 3);
                 CreateArrow();
             }
-        }
+        }*/
     }
 
     public void Charge()
@@ -68,7 +68,7 @@ public class BowShooting : MonoBehaviour
     {
         Character.Animator.SetInteger("Charge", 2);
         CreateArrow();
-        Charge();
+        //Charge();
     }
 
     private void CreateArrow() // TODO: Preload and caching prefabs is recommended to improve game performance
