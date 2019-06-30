@@ -19,11 +19,12 @@ public class BowShooting : MonoBehaviour
     [HideInInspector] public bool ChargeButtonDown;
     [HideInInspector] public bool ChargeButtonUp;
 
+    private bool _charging;
     private float _chargeTime;
 
     public void Update()
     {
-        if (ChargeButtonDown)
+        /*if (ChargeButtonDown)
         {
             _chargeTime = Time.time;
             Character.Animator.SetInteger("Charge", 1);
@@ -39,7 +40,35 @@ public class BowShooting : MonoBehaviour
             {
                 CreateArrow();
             }
+        }*/
+
+        if(!_charging)
+        {
+            _chargeTime = Time.time;
+            Character.Animator.SetInteger("Charge", 1);
+            _charging = true;
         }
+        else
+        {
+            var charged = Time.time - _chargeTime > ClipCharge.length;
+            if (charged)
+            {
+                Character.Animator.SetInteger("Charge", charged ? 2 : 3);
+                CreateArrow();
+            }
+        }
+    }
+
+    public void Charge()
+    {
+        Character.Animator.SetInteger("Charge", 1);
+    }
+
+    public void Attack()
+    {
+        Character.Animator.SetInteger("Charge", 2);
+        CreateArrow();
+        Charge();
     }
 
     private void CreateArrow() // TODO: Preload and caching prefabs is recommended to improve game performance

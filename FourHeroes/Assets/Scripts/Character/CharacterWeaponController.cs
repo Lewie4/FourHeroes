@@ -28,8 +28,9 @@ public class CharacterWeaponController : MonoBehaviour
                     break;
                 }
             case WeaponType.Bow:
-                //Character.BowShooting.ChargeButtonDown = Input.GetKeyDown(FireButton);
-                //Character.BowShooting.ChargeButtonUp = Input.GetKeyUp(FireButton);
+                {
+                    Character.BowShooting.Attack();
+                }
                 break;
             case WeaponType.Supplies:
                 /*if (Input.GetKeyDown(FireButton))

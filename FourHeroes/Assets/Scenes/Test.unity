@@ -596,6 +596,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212760796653321002, guid: 7be5d1551421c6543900a27b389d198f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 331319315653693508, guid: 7be5d1551421c6543900a27b389d198f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114390617236885450, guid: 7be5d1551421c6543900a27b389d198f, type: 3}
     - {fileID: 114556953436672544, guid: 7be5d1551421c6543900a27b389d198f, type: 3}
@@ -741,7 +751,7 @@ GameObject:
   - component: {fileID: 2056171858}
   - component: {fileID: 2056171857}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CosmeticSets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -767,19 +777,15 @@ MonoBehaviour:
   Mouth: []
   Beard: []
   Body: []
-  Helmet: []
-  Glasses: []
-  Mask: []
-  Earrings: []
   Armor:
-  - {fileID: 11400000, guid: 8e6d9916d4bee0541b83f32f9f6b96fc, type: 2}
-  Cape: []
+  - {fileID: 11400000, guid: cd6ecf3746056824394b221e9186430e, type: 2}
   Back: []
   MeleeWeapon1H: []
   MeleeWeapon2H: []
   MeleeWeaponTrail1H: []
   MeleeWeaponTrail2H: []
-  Bow: []
+  Bow:
+  - {fileID: 11400000, guid: 9dd5ff753a77a4b4fbb84099c8d0746c, type: 2}
   Shield: []
   Supplies: []
   UseTrailSprites: 1

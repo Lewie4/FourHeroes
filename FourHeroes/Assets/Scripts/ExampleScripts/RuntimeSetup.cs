@@ -11,6 +11,7 @@ public class RuntimeSetup : MonoBehaviour
     public void Start()
     {
         EquipArmor("Slave");
+        EquipBow("GoldDragon");
     }
 
     /// <summary>
